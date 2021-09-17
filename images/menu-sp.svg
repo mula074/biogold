@@ -1,0 +1,8 @@
+<svg id="コンポーネント_63_5" data-name="コンポーネント 63 – 5" xmlns="http://www.w3.org/2000/svg" width="48.975" height="48.423" viewBox="0 0 48.975 48.423">
+  <rect id="長方形_172" data-name="長方形 172" width="48.976" height="48.423" fill="#302d2c"/>
+  <g id="グループ_145" data-name="グループ 145" transform="translate(11.725 16.295)">
+    <line id="線_1" data-name="線 1" x2="25.526" transform="translate(0 10.964)" fill="none" stroke="#fbfbfc" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="線_2" data-name="線 2" x2="25.526" fill="none" stroke="#fbfbfc" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <text id="Menu" transform="translate(12.488 41.501)" fill="#fff" font-size="8" font-family="SourceHanSans-Medium, Source Han Sans" font-weight="500" letter-spacing="0.1em"><tspan x="0" y="0">Menu</tspan></text>
+</svg>

@@ -1,0 +1,245 @@
+body{
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.container{
+  max-width: 1800px;
+  /* min-width:920px; */
+  width: 100%;
+  margin: 0 auto;
+}
+/*---- ヘッダー ----*/
+.site_header{
+  color:white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.site_header ul li{
+  list-style: none;
+}
+.site_header li a{
+  text-decoration: none;
+  color: #fff;
+}
+/*---- ロゴ ----*/
+h1{
+  display: inline-block;
+  margin-left:15px; 
+  position: absolute;
+  left: 0; 
+}
+h1 img{
+  max-width:416px;
+  min-width: 175px;
+  width: 20vw;
+}
+/*---- グローバルナビ ----*/
+.gnav_wrap{
+  position: absolute;
+  right:0;
+  display: flex;
+	justify-content: right;
+}
+.gnav_main{
+  background-color: #484848;
+  width:60%;
+}
+/*各ブロック*/
+.gnav_main_block{
+  width:100%;
+  float: left;
+}
+/*上nav*/
+.gnav_upperMenu{
+  width:100%;
+  font-size: 1vw;
+  padding:0;
+  text-align: right;
+}
+.gnav_upperMenu img{
+  width:1.3vw;
+  margin:5px;
+  margin-bottom:0;
+}
+.gnav_upperMenu li{
+  display: inline;
+  margin-right:0.8em;
+}
+/*下nav*/
+.gnav_lowerMenu{
+  display: inline-block;
+  width:100%;
+  font-size: 1vw;
+  padding:0;
+  text-align: center;
+  margin-top:4%;
+}
+
+/*---- スマホ用ナビ ----*/
+.gnav_sp{
+  /*通常は非表示*/
+  display: none;
+  position: fixed;
+    top: 0;
+    right:0;
+}
+.sp_block{
+  width:8vw;
+  height:8vw;
+  min-width: 40px;
+  min-height: 40px;
+  float: left;
+}
+.gnav_sp_en{
+ background-image: url("../images/en-sp.svg");
+ background-size:contain;
+}
+.gnav_sp_document{
+  background-image: url("../images/document-sp.svg");
+  background-size:contain;
+ }
+ .gnav_sp_menu{
+  background-image: url("../images/menu-sp.svg");
+  background-size:contain;
+ }
+.gnav_lowerMenu li{
+  display: inline;
+  padding:0 0.8em;
+}
+/*---- 資料請求 ----*/
+.gnav_docmentRecuest{
+  background-color: #696969;
+  text-align: center;
+  font-size: 0.7vw;
+  padding:0.8vw 1.8vw;
+}
+.gnav_docmentRecuest img{
+  max-width: 38px;
+  width:2.5vw;
+}
+/*---- 電話番号 ----*/
+.gnav_tel{
+  font-size: 0.8vw;
+  background-color: #302D2C;
+  padding:0 2.5%;
+}
+.gnav_tel p{
+  display: block;
+  width:100%;
+}
+.gnav_tel img{
+  max-width: 258px;
+  width:15vw;
+}
+/*---- TOPスライドイメージ ----*/
+.slide_image{
+  width: 100%;
+  height: 0;
+  padding-top: calc(935 / 1920 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
+  background: url(../images/top-image.png) center center / cover no-repeat;
+}
+
+/*---- TOP-hero メッセージ ----*/
+.hero{
+  position: absolute;
+  top: 23vw;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #fff;
+}
+.hero_text{
+  font-size: 5.5vw;
+  line-height: 160%;
+  letter-spacing:0.15em;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/*---- 汎用 ----*/
+.bg-gray{
+  background-color: gray;
+}
+.fc-white{
+  color:white;
+}
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}
+.taling-l{
+  text-align: left;
+}
+.taling-c{
+  text-align: center;
+}
+.taling-r{
+  text-align: right;
+}
+/* 縦横比一定の正方形 */
+.rect-wrap {
+  width: 50% ;
+}
+.rect {
+  width : 100% ;
+  padding-top : 100% ;
+  background-color: #29d632;
+}
+/*---- Clear fix ----*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+} 
+.clearfix:before {
+  content: "";
+  display: block;
+  clear: both;
+} 
+.clearfix {
+  display: block;
+}
+
+/*---- スマホ ～520 ----*/
+@media screen and (max-width: 520px) {
+  .gnav_sp{
+    display: block;
+  }
+  /*ロゴサイズと位置変更*/
+  h1{
+    margin:10px 20px;
+  }
+  h1 img{
+    max-width:416px;
+    min-width: 175px;
+    width: 20vw;
+  }
+  /* スライド画像をスマホ用に変更 */
+  .slide_image{
+    width: 100%;
+    height: 0;
+    padding-top: calc(542 / 428 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
+    background: url(../images/top-image-sp.jpg) center center / cover no-repeat;
+  }
+  /*heroテキストをスマホ用に変更*/
+  .hero{
+    top: 57vw;
+  }
+  .hero_text{
+    font-size: 9vw;
+  }
+
+ }
+ /*---- PC(小) 521～920 ----*/
+ @media screen and (max-width: 920px) {
+  /*スマホ用ナビに変更*/
+  .gnav{
+    display: none;
+  }
+  .gnav_sp{
+    display: block;
+  }
+  
+ }
