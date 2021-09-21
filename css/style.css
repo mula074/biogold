@@ -204,13 +204,13 @@ h1 img {
 }
 
 .slide2 {
-    background: url(../images/top-image2.png) center center / cover no-repeat;
+    background: url(../images/top-image2.png?20210921) center center / cover no-repeat;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
 }
 
 .slide3 {
-    background: url(../images/top-image3.png) center center / cover no-repeat;
+    background: url(../images/top-image3.png?20210921) center center / cover no-repeat;
     -webkit-animation-delay: 6s;
     animation-delay: 6s;
 }
