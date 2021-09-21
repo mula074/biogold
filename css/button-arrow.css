@@ -1,0 +1,63 @@
+/*矢印ボタン用CSS*/
+.btnarrow5{
+    /*矢印の基点とするためrelativeを指定*/
+	position: relative;
+    /*ボタンの形状*/
+	border: 1px solid #555;
+    padding: 8px 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .2s linear;
+    width: 25%;
+    font-size:16px;
+}
+
+
+
+/*矢印と下線の形状*/
+.btnarrow5::before{
+	content:"";
+    /*絶対配置で下線の位置を決める*/
+	position: absolute;
+	top:50%;
+	right:10px;
+    /*下線の形状*/
+	width:35px;
+	height:1px;
+	background:#333;
+    /*アニメーションの指定*/
+    transition: all .2s ease;
+}
+
+.btnarrow5::after{
+	content:"";
+    /*絶対配置で矢印の位置を決める*/
+	position: absolute;
+    top: 39%;
+    right: 14px;
+    /*矢印の形状*/
+	width:1px;
+	height:5px;
+	background:#333;
+    transform:skewX(60deg);
+    /*アニメーションの指定*/
+    transition: all .2s ease;
+}
+
+/*hoverした際の移動*/
+.btnarrow5:hover::before{
+	right:-10px;
+}
+
+.btnarrow5:hover::after{
+	right:-5px;
+}
+/*---- スマホ ～520 ----*/
+
+@media screen and (max-width: 520px) {
+    .btnarrow5{
+        width:195px;
+}
