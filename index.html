@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/button-arrow.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css?20210922_1">
+    <link rel="stylesheet" type="text/css" href="owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/slide.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?20210922_1">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
     <title>バイオゴールド ウェブへようこそ！天然肥料＆活性液</title>
 </head>
@@ -86,14 +89,6 @@
                 <dl>
                     <dt>2021-07-05</dt>
                     <dd>【重要】商品お届けに関するお知らせ</dd>
-                    <dt>2021-07-05</dt>
-                    <dd>【重要】商品お届けに関するお知らせ</dd>
-                    <dt>2021-07-05</dt>
-                    <dd>【重要】商品お届けに関するお知らせ</dd>
-                    <dt>2021-07-05</dt>
-                    <dd>【重要】商品お届けに関するお知らせ</dd>
-                    <dt>2021-07-05</dt>
-                    <dd>【重要】商品お届けに関するお知らせ</dd>
                 </dl>
             </div>
         </div><!-- End of topNews -->
@@ -102,13 +97,13 @@
                 <h2>About Us</h2>
                 <h3>海外からも絶賛される理由</h3>
                 <p>バイオゴールドは植物の基本は「根」であることを主眼にしながら、「生きた土壌を造る」ことも目指した活性材。誰の目からも回復は無理と思われる樹木・古木等をみごとによみがえらせ、専門家を驚嘆させました。</p>
-                <div class="button-area"><a href="#" class="btnarrow5">More</a></div>
+                <div class="button-area"><a href="#" class="btnarrow">More</a></div>
             </div>
             <div class="flex-5 fade-b">
                 <img src="./images/about-us.jpg" alt="About Us">
             </div>
         </div>
-        <div id="about-select" class="">
+        <div id="about-select" >
             <div class="back-img"></div>
             <div class="flex-1 select-space"></div>
             <div class="flex-7 select-list fade-b">
@@ -116,21 +111,119 @@
                     <img src="./images/about-select-item1.jpg" alt="初めての方へ">
                     <h3>初めての方へ</h3>
                     <p>はじめてバイオゴールドをご利用される方にお伝えしたい、有機肥料による栽培のお話。</p>
-                    <div class="button-area"><a href="#" class="btnarrow5">More</a></div>
+                    <div class="button-area"><a href="#" class="btnarrow">More</a></div>
                 </div>
                 <div class="select-list-item">
                     <img src="./images/about-select-item2.jpg" alt="バイオゴールドブランド">
                     <h3>バイオゴールドブランド</h3>
                     <p>バイオゴールドの肥料や活性液は、時間をかけ、ていねいに発酵させているから、植物に優しくしみわたっていきます。</p>
-                    <div class="button-area"><a href="#" class="btnarrow5">More</a></div>
+                    <div class="button-area"><a href="#" class="btnarrow">More</a></div>
                 </div>
                 <div class="select-list-item">
                     <img src="./images/about-select-item3.jpg" alt="SDGsへの取り組み">
                     <h3>SDGs への取り組み</h3>
                     <p>植物を生活にとりいれ、自然と共に暮らすという理念のもと、「地球を守る製品」を開発する取り組みをしています。</p>
-                    <div class="button-area"><a href="#" class="btnarrow5">More</a></div>
+                    <div class="button-area"><a href="#" class="btnarrow">More</a></div>
                 </div>
             </div>
+        </div>
+        <div id="mainNews" >
+            <div class="title">
+                <h2>News</h2>
+                <h3>新着情報</h3>
+            </div>
+            <div class="content">
+                <!-- タブメニュー -->
+                <ul class="tab">
+                    <li class="active" ><a href="#all">すべて</a></li>
+                    <li><a href="#biogold">バイオゴールドニュース</a></li>
+                    <li><a href="#column">コラム</a></li>
+                    <li><a href="#event">イベントニュース</a></li>
+                  </ul>
+                  <!-- メニューエリア -->
+                  <div id="all" class="area">
+                    <ul>
+                        <li>
+                            <span class="day flex-1">2021/07/19</span>
+                            <span class="cat flex-2">バイオゴールドニュース</span>
+                            <p class="newsBody flex-5">【重要】東京2020オリンピック・パラリンピック競技大会に伴うお届け遅延の可能性について</p>
+                        </li>
+                        <li>
+                            <span class="day flex-1">2021/07/19</span>
+                            <span class="cat flex-2">コラム</span>
+                            <p class="newsBody flex-5">【連載第9回】イメージだけつかめばOK！pH(ピーエイチ)とEC(イーシー)</p>
+                        </li>
+                        <li>
+                            <span class="day flex-1">2021/07/19</span>
+                            <span class="cat flex-2">コラム</span>
+                            <p class="newsBody flex-5">【おすすめ本】ベランダ寄せ植え菜園〜自然の力を借りるから失敗しない〜[著:たなかやすこ]</p>
+                        </li>
+                    </ul>
+                  <!--/area--></div>
+                  <div id="biogold" class="area">
+                    <ul>
+                        <li>
+                            <span class="day flex-1">2021/07/19</span>
+                            <span class="cat flex-2">バイオゴールドニュース</span>
+                            <p class="newsBody flex-5">【重要】東京2020オリンピック・パラリンピック競技大会に伴うお届け遅延の可能性について</p>
+                        </li>
+                    </ul>
+                  <!--/area--></div>
+                  <div class="button-area"><a href="#" class="btnarrow">More</a></div>
+            </div>
+        </div>
+        <div id="gallery">
+            <div class="title">
+                <h2>Gallery</h2>
+                <h3>導入事例</h3>
+            </div>
+            <!--ギャラリースライダー -->
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="./images/gallery1.jpg" alt="星の王子様ミュージアム">
+                    <div class="content">
+                        <span>星の王子さまミュージアム</span>
+                        <p>箱根　サン = テグジュペリ</p>
+                        <p class="address">神奈川県足柄下郡箱根町仙石原909</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/gallery2.jpg" alt="軽井沢レイクガーデン">
+                    <div class="content">
+                        <span>軽井沢レイクガーデン</span>
+                        <p>水辺のガーデンリゾートで心癒される</p>
+                        <p class="address">長野県北佐久郡軽井沢町レイクニュータウン</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/gallery3.jpg" alt="クレマチスの丘">
+                    <div class="content">
+                        <span>クレマチスの丘</span>
+                        <p>約200種2000株のクレマチスが植栽</p>
+                        <p class="address">静岡県長泉町東野クレマチスの丘347-1</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/gallery4.jpg" alt="はままつフラワーパーク">
+                    <div class="content">
+                        <span>はままつフラワーパーク</span>
+                        <p>3,000種10万本の植物が植えられている植物園</p>
+                        <p class="address">静岡県浜松市西区舘山寺町195番地</p>
+                    </div>
+                </div><!-- .item -->
+              </div><!-- .owl-carousel -->
+              <div class="button-area"><a href="#" class="btnarrow">More</a></div>
+        </div>
+        <!-- End of Gallery -->
+        <div class="lattice">
+        <div id="prosite">
+            <div class="lattice-left"><img src="images/prosite.jpg" alt="Prosite" ></div>
+            <div class="lattice-right">
+                <h2>Prosite</h2>
+                <h3>業務用製品・サービスのご案内</h3>
+                <div class="button-area"><a href="#" class="btnarrow">More</a></div>
+            </div>
+        </div>
         </div>
     </div> <!-- End of wrap -->
 </body>

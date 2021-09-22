@@ -1,4 +1,5 @@
 body {
+    color:#302D2C;
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
@@ -257,32 +258,29 @@ h1 img {
 #topNews .content {
     background-color: #F6F6F6;
     width: 79%;
+    display: flex;
+    align-items: center;
 }
 
 #topNews dl {
-    display: flex;
+    width:100%;
     flex-wrap: wrap;
+    margin:0;
+    display: block;
 }
 
 #topNews dl dt {
-    float: left;
     width: 15%;
     padding-left: 3%;
     font-size: 1.5vw;
-    margin-bottom: 1em;
-}
-#topNews dl dt:last-of-type{
-    margin-bottom: 0;
+    white-space: nowrap;
+    float: left;
 }
 #topNews dl dd {
     font-size: 15px;
     width: 82%;
     margin: 0;
     font-size: 1.5vw;
-    margin-bottom: 1em;
-}
-#topNews dl dd:last-of-type{
-    margin-bottom: 0;
 }
 
 /*---- About Us ----*/
@@ -365,6 +363,159 @@ h1 img {
     text-align: left;
     margin-right:15px;
     font-size: 1.6vw;
+}
+
+/*---- タブ分けのニュース ----*/
+#mainNews {
+    text-align: center;
+    margin:0 8%;
+}
+.title h2{
+    font-weight: normal;
+    font-size: 4.5vw;
+    margin: 1em 0 0.3em 0;
+}
+.title h3{
+    font-weight: normal;
+    font-size: 1.3vw;
+    color:#777777;
+}
+#mainNews .tab{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+#mainNews .tab li{
+	list-style: none;
+}
+#mainNews .tab li a{
+	display: block;
+	margin:0 2px;
+	padding:10px 20px;
+    text-decoration: none;
+    color: #A6A6A6;
+}
+/*liにactiveクラスがついた時の形状*/
+#mainNews .tab li.active a{
+	color: #000000;
+}
+/*エリアの表示非表示と形状*/
+#mainNews .area {
+	display: none;/*はじめは非表示*/
+	opacity: 0;/*透過0*/
+	padding:10px 20px;
+}
+#mainNews .area li{
+    list-style: none;
+    display: flex;
+    padding:20px 5%;
+    border-top: 1px solid #C6C6C6;
+}
+#mainNews .area li:last-child{
+    border-bottom: 1px solid #C6C6C6;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+#mainNews .area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+#mainNews .day{
+    color:#A3A3A3;
+}
+#mainNews .cat{
+    color:#A3A3A3;
+}
+#mainNews .newsBody {
+    color:#666666;
+	text-align: left;
+    margin:0;
+}
+/*Moreボタン調整*/
+#mainNews .button-area a{
+    width:15%;
+    text-align: left;
+}
+
+/*---- Gallery ギャラリー ----*/
+
+#gallery{
+    margin-top:50px;
+    padding:20px 0 60px 0;
+    width:100%;
+    background-color: #F6F6F6;
+    text-align: center;
+}
+.owl-carousel{
+    margin-bottom:40px;
+}
+#gallery .item{
+    text-align: left;
+    background-color: white;
+    box-shadow: 0px 2px 4px gray;
+  }
+  /*影用にpadding追加*/
+  .owl-carousel .owl-stage{
+      padding-bottom:5px;
+  }
+  #gallery .item .content{
+      padding-top:1vw;
+      padding-left:1vw;
+  }
+  #gallery .item span{
+      font-size: 17px;
+      font-weight: bold;
+  }
+  #gallery .item p{
+      margin:0;
+      font-size: 12px;
+      color:#a6a6a6;
+      padding-top:5px;
+  }
+  #gallery .item .address{
+    font-size: 11px;
+    padding-bottom:10px;
+    padding-top:20px;
+  }
+  /*Moreボタン調整*/
+  #gallery .button-area a{
+    width:calc(15% - 2%);
+    text-align: left;
+}
+/*---- Prosite ----*/
+.lattice img{
+    width:100%;
+}
+#prosite{
+    display: flex;
+}
+#prosite .lattice-left{
+    flex:5;
+}
+#prosite .lattice-right{
+    text-align: center;
+    flex:4;
+    background-color: #000;
+    color:white;
+}
+#prosite .lattice-right h2{
+    margin:0;
+    font-weight: normal;
+    font-size: 4.5vw;
+}
+#prosite .lattice-right h3{
+    font-weight: normal;
+    font-size: 1.8vw;
 }
 /*---- 汎用 ----*/
 
@@ -546,6 +697,37 @@ h1 img {
     #about-select .select-list-item p{
         font-size: 15px;
     }
+    /* タブニュース */
+    #mainNews {
+        margin: 0 5%;
+    }
+    #mainNews .area ul{
+        margin: 0;
+        padding:0;
+    }
+    #mainNews .area li{
+        display: block;
+        text-align: left;
+    }
+    #mainNews .area span{
+        padding: 5px;
+    }
+    #mainNews .area li p{
+        padding-top:30px;
+    }
+    /* ギャラリー */
+    #gallery .item{
+        width:90%;
+        margin: 0 5%;        
+    }
+    #gallery .content{
+        width:90%;
+        margin: 5% 5%;
+    }
+    #gallery .button-area{
+        text-align: center;
+    }
+    
 }
 
 
