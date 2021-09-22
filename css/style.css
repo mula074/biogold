@@ -471,6 +471,12 @@ h1 img {
     .hero_text {
         font-size: 9vw;
     }
+    #topNews dl dt{
+        font-size: 13px;
+    }
+    #topNews dl dd{
+        font-size: 13px;
+    }
     /*About Us をカラム落とし*/
     #about{
         margin-top:50px;
