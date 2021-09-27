@@ -914,8 +914,12 @@ h1 img {
     }
     #footerBox .foot-list ul li{
         font-size: 11px;
+        padding:5px 10px;
+        width:auto;
     }
-
+    #footerBox .right-block .foot-list ul li{   
+        
+    }
 }
 
 
