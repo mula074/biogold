@@ -957,6 +957,7 @@ h1 img {
     /* フッターボタン*/
     #footerBox .btn-area{
         text-align: left;
+        flex-wrap: wrap;
     }
     #footerBox .btn-area .btn-block{
         width:33%;
