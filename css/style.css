@@ -594,7 +594,7 @@ h1 img {
     margin-left:5%;
 }
 
-#footerBox p{
+#footerBox .content p{
     border-bottom:1px solid #676767;
     padding-bottom:10px;
 }
@@ -627,6 +627,42 @@ h1 img {
     width:48%;
     padding:0.5%;
 }
+/* ボタンエリア */
+
+#footerBox .btn-area{
+    /* display: flex; */
+    display: block;
+    text-align: center;
+    padding-bottom:40px;
+}
+#footerBox  .btn-area .btns{
+    margin:0 auto;
+}
+#footerBox .btn-area .btn-block{
+    width:20%;
+    padding:5px 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5vw;
+    border:2px solid  #1A1311;
+    margin:10px 15px;
+}
+#footerBox .btn-area .btn-block a{
+    text-decoration: none;
+    color:#A3A09F;
+}
+#footerBox .btn-area .btn-block .middle{
+    border-bottom:1px solid #676767;
+    font-size: 0.8vw;
+    padding-bottom:5px;
+}
+#footerBox .btn-area .btn-block .middle{
+    
+}
+#footerBox .btn-area .btn-block .bottom{
+    margin:0 5px;
+}
+
 /*---- 汎用 ----*/
 
 .bg-gray {
@@ -913,13 +949,20 @@ h1 img {
         flex-flow: column;
     }
     #footerBox .foot-list ul li{
-        font-size: 11px;
+        font-size: 10px;
         padding:5px 10px;
         width:auto;
     }
     #footerBox .right-block .foot-list ul li{
         padding:5px 10px;
         width:auto;
+    }
+    /* フッターボタン*/
+    #footerBox .btn-area{
+        text-align: left;
+    }
+    #footerBox .btn-area .btn-block{
+        width:33%;
     }
 }
 
