@@ -850,6 +850,12 @@ h1 img {
     #contact .btn-block{
         margin:10px 20px;
     }
+    .ghost-btn .middle{
+        font-size: 11px;
+    }
+    .ghost-btn .bottom{
+        font-size: 11px;
+    }
 }
 
 
