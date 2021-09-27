@@ -656,9 +656,6 @@ h1 img {
     font-size: 0.8vw;
     padding-bottom:5px;
 }
-#footerBox .btn-area .btn-block .middle{
-    
-}
 #footerBox .btn-area .btn-block .bottom{
     margin:0 5px;
 }
@@ -963,6 +960,12 @@ h1 img {
     }
     #footerBox .btn-area .btn-block{
         width:33%;
+    }
+    #footerBox .btn-area .btn-block .middle{
+        font-size: 8px;
+    }
+    #footerBox .btn-area .btn-block .bottom{
+        font-size: 10px;
     }
 }
 
