@@ -36,7 +36,7 @@
 }
 
 /*下からフェードイン*/
-.fade{
+.fade-b{
   opacity: 0;
 }
 .fade-in-bottom {
@@ -54,5 +54,48 @@
   100% {
      opacity: 1;
      transform: translateY(0);
+  }
+}
+/*右からフェードイン*/
+.fade-r{
+  opacity: 0;
+}
+.fade-in-right {
+  opacity: 0;
+  animation-name: fadein-right;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-right {
+  0% {
+     opacity: 0.2;
+     transform: translateX(80%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
+
+/*左からフェードイン*/
+.fade-l{
+  opacity: 0;
+}
+.fade-in-left {
+  opacity: 0;
+  animation-name: fadein-left;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-left {
+  0% {
+     opacity: 0.2;
+     transform: translateX(-80%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
   }
 }

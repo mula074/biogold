@@ -495,27 +495,88 @@ h1 img {
 /*---- Prosite ----*/
 .lattice img{
     width:100%;
+    height: 100%;
 }
-#prosite{
-    display: flex;
-}
-#prosite .lattice-left{
+
+.lattice-img{
     flex:5;
 }
-#prosite .lattice-right{
+.lattice-black{
+    display: flex;
     text-align: center;
     flex:4;
     background-color: #000;
     color:white;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top:10px;
 }
-#prosite .lattice-right h2{
+.lattice-black h2{
     margin:0;
     font-weight: normal;
-    font-size: 4.5vw;
+    font-size: 4.2vw;
+    letter-spacing: 0.1em;
 }
-#prosite .lattice-right h3{
+.lattice-black h3{
+    letter-spacing: 0.2em;
     font-weight: normal;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
+}
+.lattice-black .button-area {
+    flex-shrink: 0;
+    width:100%;
+}
+.lattice-black .button-area a{
+    margin:4vw 0;
+    width:40%;
+    border-color:#FFFFFF;
+    color:#FFFFFF;
+}
+.lattice-black .btnarrow::before {
+    background: #FFFFFF;
+}
+.lattice-black .btnarrow::after {
+    background: #FFFFFF;
+}
+
+/*---- Contact ----*/
+#contact {
+    color:#FFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/contact-back.jpg) center center / cover no-repeat;
+    padding:5vw 0;
+}
+#contact h2{
+    margin:0;
+    font-weight: normal;
+    font-size: 4.2vw;
+    letter-spacing: 0.1em;
+}
+#contact h3{
+    letter-spacing: 0.2em;
+    font-weight: normal;
+    font-size: 1.5vw;
+}
+#contact .button-colmun{
+    display: flex;
+    justify-content: space-between;
+}
+#contact .btn-block{
+    width:100%;
+    flex:1;
+    margin: 0 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 2px solid #fff;
+
+}
+#contact img{
+    width:70%;
 }
 /*---- 汎用 ----*/
 
@@ -546,6 +607,9 @@ h1 img {
 .taling-r {
     text-align: right;
 }
+.disp-flex{
+    display: flex;
+}
 .flex-1{flex:1;}
 .flex-2{flex:2;}
 .flex-3{flex:3;}
@@ -569,7 +633,35 @@ h1 img {
     background-color: #29d632;
 }
 
-
+/*----- ゴーストボタン-----*/
+.ghost-btn a {
+    display: flex;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+  }
+  .ghost-btn .top{
+      display: block;
+      width:100%;
+      text-align: center;
+  }
+  .ghost-btn .middle{
+      display: block;
+      font-size: 1vw;
+      width:100%;
+      margin-top:10px;
+  }
+  .ghost-btn .bottom{
+    display: block;
+      width:85%;
+      font-size: 1vw;
+      text-align: right;
+      margin-right:15%;
+      margin-bottom:10px;
+  }
 /*---- Clear fix ----*/
 
 .clearfix:after {
@@ -715,6 +807,9 @@ h1 img {
     #mainNews .area li p{
         padding-top:30px;
     }
+    #mainNews .button-area a{
+        width:30%;
+    }
     /* ギャラリー */
     #gallery .item{
         width:90%;
@@ -727,7 +822,24 @@ h1 img {
     #gallery .button-area{
         text-align: center;
     }
+    #gallery .button-area a{
+        width:30%;
+    }
+    /*prosite */
+    .lattice-black .button-area {
+        text-align: center;
+    }
+    .lattice-black .button-area a{
+        height:10px;
+        font-size: 12px;
+    }
     
+    .lattice-img{
+        flex:1;
+    }
+    .lattice-black{
+        flex:1;
+    }
 }
 
 
