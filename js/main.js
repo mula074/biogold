@@ -1,5 +1,5 @@
 //*********私達についてのHover時 *********/
-//Hover時にサブメニュの表示
+//ドロップダウンメニューの表示
 $(document).on("click", ".show-subMenu a", function(){
     console.log("ff");
     
@@ -32,6 +32,18 @@ $('body').click(function() {
     $('.gnav-about').fadeOut();
   });
 
+//*********スマホメニュースライド  *******/
+$(document).on("click", ".gnav_sp_menu", function(){
+    $('.slide-menu-sp').addClass("fade-in-sub");
+    $('.slide-menu-sp').removeClass("fade-out-sub");
+    closeSub();
+});
+function closeSub (){
+    $(document).on("click", ".close-icon", function(){
+        $('.slide-menu-sp').addClass("fade-out-sub");
+        $('.slide-menu-sp').removeClass("fade-in-sub");
+    });
+}
 //*********スライド表示*********
 
 /* 下から */

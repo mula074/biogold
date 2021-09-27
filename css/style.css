@@ -226,6 +226,24 @@ h1 img {
     padding: 0 0.8em;
 }
 
+/* ---- スマホ用　スライドメニュー表示 ----*/
+.slide-menu-sp{    
+    position:absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height:300px;
+    width:100%;
+    background-color: rgba(0,0,0, 0.75);
+    color:#FFFFFF;
+    transform: translateX(-100%);
+}
+.slide-menu-sp .close-icon{
+    text-align: right;
+}
+.slide-menu-sp .close-icon img{
+    margin:10px;
+}
 
 /*---- 資料請求 ----*/
 
