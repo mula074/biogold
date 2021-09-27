@@ -626,7 +626,6 @@ h1 img {
 #footerBox .right-block .foot-list ul li{    
     width:48%;
     padding:0.5%;
-    font-size: 1.2vw;
 }
 /*---- 汎用 ----*/
 
@@ -912,6 +911,9 @@ h1 img {
     /* FooterBox フッターボックス*/
     #footerBox .content{
         flex-flow: column;
+    }
+    #footerBox .foot-list ul li{
+        font-size: 11px;
     }
 
 }
