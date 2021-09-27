@@ -232,7 +232,6 @@ h1 img {
     z-index: 3;
     top: 0;
     left: 0;
-    height:300px;
     width:100%;
     background-color: rgba(0,0,0, 0.75);
     color:#FFFFFF;
@@ -244,7 +243,55 @@ h1 img {
 .slide-menu-sp .close-icon img{
     margin:10px;
 }
-
+.slide-menu-sp .title{
+    width:100%;
+    text-align: center;
+    font-size: 21px;
+    padding:30px 0;
+}
+.slide-menu-sp .content{
+    width:80%;
+    margin-left:10%;
+}
+.slide-menu-sp .content .menu-list{
+    width:100%;
+    border-bottom:1px solid #FFF;
+    padding:10px 0 5px 0;
+    margin-top:5px;
+}
+.slide-menu-sp .content .menu-list:last-child{
+    border:none;
+}
+.slide-menu-sp .content .menu-list .list-item{
+    width:78%;
+    margin-left:2%;
+    float: left;
+    text-align: left;
+}
+.slide-menu-sp .content .menu-list .icon{
+    width:18%;
+    margin-right:2%;
+    padding-bottom:4px;
+    float: left;
+    text-align: right;
+}
+.slide-menu-sp .content .menu-list .drop-list{
+    padding:0;
+    margin:0;
+}
+.slide-menu-sp .content .menu-list .drop-list ul{
+    padding: 0;
+    margin: 0 15px;
+}
+.slide-menu-sp .content .menu-list .drop-list ul li{
+    font-size: 12px;
+    margin:10px 0;
+}
+.slide-menu-sp .content .menu-list .drop-list ul li img{
+    height:12px;
+    margin-right:10px;
+    margin-bottom:-2px;
+}
 /*---- 資料請求 ----*/
 
 .gnav_docmentRecuest {
