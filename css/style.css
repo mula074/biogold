@@ -579,6 +579,55 @@ h1 img {
 #contact img{
     width:70%;
 }
+/*---- フッターボックス----*/
+#footerBox{
+    width:100%;
+    background-color: #222222;
+    color: #FFFFFF;
+    padding-top:30px;
+}
+#footerBox .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    margin-left:5%;
+}
+
+#footerBox p{
+    border-bottom:1px solid #676767;
+    padding-bottom:10px;
+}
+#footerBox .cat-list{
+    display: flex;
+}
+#footerBox .left-block{
+    flex:4;
+}
+#footerBox .right-block{
+    flex:5;
+}
+#footerBox .foot-list ul{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+}
+#footerBox .foot-list ul li{
+    color:#E3E3E3;
+    width:32%;
+    padding:0.5%;
+    font-size: 1.2vw;
+}
+#footerBox .left-block{
+    margin-right:2%;
+}
+#footerBox .right-block .foot-list ul li{    
+    width:48%;
+    padding:0.5%;
+    font-size: 1.2vw;
+}
 /*---- 汎用 ----*/
 
 .bg-gray {
@@ -841,6 +890,10 @@ h1 img {
     .lattice-black{
         flex:1;
     }
+    /* Contact */
+    #contact {
+        background: url(../images/contact-back-sp.jpg) center center / cover no-repeat;
+    }
     #contact p{
         font-size: 11px;
     }
@@ -856,6 +909,11 @@ h1 img {
     .ghost-btn .bottom{
         font-size: 11px;
     }
+    /* FooterBox フッターボックス*/
+    #footerBox .content{
+        flex-flow: column;
+    }
+
 }
 
 
