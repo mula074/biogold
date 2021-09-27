@@ -54,11 +54,13 @@ h1 img {
     right: 0;
     display: flex;
     justify-content: right;
+    flex-wrap: wrap;
+    width:100%;
 }
 
 .gnav_main {
     background-color: #484848;
-    width: 60%;
+    width: 45%;
 }
 
 
@@ -101,7 +103,90 @@ h1 img {
     text-align: center;
     margin-top: 4%;
 }
-
+/* hover時*/
+.gnav_lowerMenu a{
+    position: relative;
+}
+.gnav_lowerMenu a::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    height: 4px;
+    width:100%;
+    background: #F8F8F8;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+  }
+  .gnav_lowerMenu a:hover::after {
+    bottom: -8px;
+    opacity: 1;
+    visibility: visible;
+  }
+  /*---- ナビのHover時のサブメニュー ----*/
+  .gnav-about{
+    display: none;
+    width:100%;
+    background-color: rgba(255,255,255, 0.87);
+    color: #302D2C;
+    padding-bottom:30px;
+  }
+  .gnav-about .content{
+      width:80%;
+      margin-top:30px;
+      margin-left:10%;
+      display: flex;
+  }
+  .gnav-about .content .title{
+      border-bottom :1px solid #707070;
+      padding-bottom:10px;
+      font-weight: bold;
+      
+  }
+  .gnav-about .content .sub-nav-left{
+      flex:7;
+  }
+  .gnav-about .content .sub-nav-right{
+    flex:3;
+}
+.gnav-about .content .sub-list ul{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    padding:0;
+}
+.gnav-about .content .sub-list ul li{
+    width:32%;
+    padding:5px 0.5%;
+    font-size: 1vw;
+}
+.gnav-about .content .sub-nav-right .button-area{
+    margin:15px 0;
+}
+.gnav-about .content .sub-nav-right .button-area img{
+    height:20px;
+    margin-bottom:-5px;
+}
+.gnav-about .content .sub-nav-right .button-area span{
+    margin-left:15px;
+}
+.gnav-about .content .sub-nav-right .button-area a{
+    margin-left:15%;
+    width: 70%;
+    background-color: #FFFFFF;
+    font-size: 0.8vw;
+    padding:12px 10px;
+    text-align: left;
+}
+.gnav-about .content .sub-nav-right .btnarrow::before{
+    height:0.8px;
+    width:30px;
+}
+.gnav-about .content .sub-nav-right .btnarrow::after{
+    top:39%;
+}
 
 /*---- スマホ用ナビ ----*/
 
@@ -682,6 +767,11 @@ background-color: #1A1311;
     padding-bottom:10px;
     width:70%;
 }
+#footerBottom .footer-line{
+    width:100%;
+    height:1px;
+    background-color: #A3A09F;    
+}
 #footerBottom .footer-info .sns{
     float: left;
     width:30%;
@@ -700,7 +790,7 @@ background-color: #1A1311;
 #footerBottom .footer-policy{
     color:#FFF;
     font-size: 1.5vw;
-    padding:0 30px;
+    padding:0 30px 15px 30px;
 }
 #footerBottom .footer-policy ul{
     padding:0;
@@ -710,11 +800,7 @@ background-color: #1A1311;
     margin : 5px 10px 5px 0;
     float: left;
 }
-#footerBottom .footer-line{
-    width:100%;
-    height:1px;
-    background-color: #A3A09F;    
-}
+
 /*---- 汎用 ----*/
 
 .bg-gray {
@@ -1024,6 +1110,9 @@ background-color: #1A1311;
     #footerBox .btn-area .btn-block .bottom{
         font-size: 10px;
         padding:5px;
+    }
+    #footerBottom{
+        font-size: 10px;
     }
 }
 

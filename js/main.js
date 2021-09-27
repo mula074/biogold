@@ -1,3 +1,37 @@
+//*********私達についてのHover時 *********/
+//Hover時にサブメニュの表示
+$(document).on("click", ".show-subMenu a", function(){
+    console.log("ff");
+    
+    if($(".gnav-about").css("display")=="none"){
+        $('.gnav-about').fadeIn();
+    }else{
+        $('.gnav-about').fadeOut();
+   }
+   //Hoverのフラグ
+   $('.gnav-about').hover(function(){
+    isOver = true;
+  }, function(){
+    isOver = false;
+  }); 
+
+   // メニュー領域外をクリックしたらメニューを閉じる
+    $('body').click(function() {
+        if (isOver == false) {
+            $('.gnav-about').fadeOut();
+         }
+    });
+    return false;//aタグを無効にする
+});
+// メニュー領域外をクリックしたらメニューを閉じる
+$('body').click(function() {
+    //if (over_flg == false) {
+    //  $('span').removeClass('selected');
+    //  $('ul').slideUp('fast');
+    // }
+    $('.gnav-about').fadeOut();
+  });
+
 //*********スライド表示*********
 
 /* 下から */
