@@ -917,8 +917,9 @@ h1 img {
         padding:5px 10px;
         width:auto;
     }
-    #footerBox .right-block .foot-list ul li{   
-        
+    #footerBox .right-block .foot-list ul li{
+        padding:5px 10px;
+        width:auto;
     }
 }
 
