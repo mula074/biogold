@@ -236,6 +236,9 @@ h1 img {
     background-color: rgba(0,0,0, 0.75);
     color:#FFFFFF;
     transform: translateX(-100%);
+    overflow-y: scroll;
+    position: fixed;
+    height:100%;
 }
 .slide-menu-sp .close-icon{
     text-align: right;
@@ -291,6 +294,56 @@ h1 img {
     height:12px;
     margin-right:10px;
     margin-bottom:-2px;
+}
+.slide-menu-sp .two-block{
+    width:100%;
+    padding:20px 0;
+}
+.slide-menu-sp .two-block .half{
+    float: left;
+    width:50%;
+}
+.slide-menu-sp .two-block p{
+    font-size: 9px;
+    margin: 5px 0 5px 20%;
+}
+.slide-menu-sp .two-block p:last-child{
+    font-size: 13px;
+}
+.slide-menu-sp .back-b{
+    background-color: #000000;
+}
+.slide-menu-sp .back-g{
+    background-color: #E6E6E6;
+    color:#000000;
+    text-align: center;
+}
+.slide-menu-sp .back-g img{
+    height:47px;
+    margin-bottom:10px;
+}
+.slide-menu-sp .back-g2{
+    background-color: #302D2C;
+    color:#FFFFFF;
+    text-align: center;
+    padding-bottom:20px;
+}
+.slide-menu-sp .back-g2 img{
+    height:35px;
+    margin-bottom:-10px;
+}
+.slide-menu-sp .back-g2 span{
+    padding:10px;
+}
+.slide-menu-sp .bottom{
+    color: #000;
+    background-color: #FFF;
+    padding:10px 0 30px 20px;
+}
+.slide-menu-sp .bottom span{
+    display: inline-block;
+    padding: 5px;
+    font-size: 13px;
 }
 /*---- 資料請求 ----*/
 
