@@ -107,7 +107,76 @@
     padding:5px 0 10px 0;
 }
 
+/*---- 製品詳細ページ ----*/
+.product-info{
+    display: flex;
+    width:80%;
+    margin:40px 10%;
+}
+.product-info .half{
+    flex:1;
+    width:50%;
+}
+.product-info .product-image img{
+    width:100%;
+}
+.product-info .product-content .sub-title{
+    font-size: 1.3vw;
+}
+.product-info .product-content .title{
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+.product-info .product-content .under-title{
+    font-size: 1.5vw;
+}
+.product-info .product-content .recomend{
+    font-size: 1.2vw;
+}
+.product-info .product-content .btnarrow{
+    width:50%;
+}
+.product-info .product-content .pro-button a{
+    width:90%;
+    margin-top:20px;
+    padding:10px 0%;
+    display: block;
+    text-decoration: none;
+    color:#4B4B4B;
+    background-color: #fff;
+    border: 1px solid #4B4B4B;
+    text-align: center;
+}
 
+/*---- スペック用のテーブル ----*/
+.spec{
+    width:100%;
+    text-align: center;
+}
+.spec table{
+    display: inline-block;
+    border-collapse:  collapse; /* セルの線を重ねる */
+}
+.spec th,td {
+    border: solid 1px #E3E3E3; /* 枠線指定 */
+    padding:10px 20px;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+}
+.spec td{
+    line-height: 1.2em;
+}
+.spec td span{
+    font-size: 12px;
+}
+
+ 
+.spec th {
+    background-color: #6C7B5A;
+    color: #FFF;
+}
+.spec table tr:nth-child(odd){
+    background-color: #F8F8F8;
+  }
 
 /*---- PC(小) 521～920 ----*/
 
@@ -132,5 +201,36 @@
     }
     #mainProducts .tab li a{
         font-size: 15px;
+    }
+    /* 製品詳細のカラム落とし */
+
+    .product-info .half{
+        width:100%;
+    }
+    .product-info{
+        flex-direction: column;
+    }
+    .product-info .product-content .btnarrow{
+        width:100%;
+        margin-top:20px;
+        padding:10px 0;
+        text-align: center;
+    }
+    .product-info .product-content .pro-button a{
+        width:100%;
+    }
+    .spec table{
+        display: block;
+        margin-left:5%;
+    }
+    /* テーブルのセル幅 */
+    .spec th,td {
+        width:95%;
+        display: block;
+        padding:10px 0;
+        margin:0;
+    }
+    .spec table tr:nth-child(odd){
+        background-color: #FFF;
     }
 }
