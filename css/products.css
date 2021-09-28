@@ -1,0 +1,136 @@
+.topImg{
+    width:100%
+}
+.topImg img{
+    width:100%;
+}
+#mainProducts .title{
+    text-align: center;
+    margin-bottom:60px;
+}
+
+/*---- 製品タブ ----*/
+#mainProducts .area{
+    display: none;/*はじめは非表示*/
+}
+#mainProducts .area.is-active{
+    display: flex;
+    animation: show .5s linear 0s;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#mainProducts .tab{
+    width:80%;
+    margin:20px 10%;
+}
+#mainProducts .tab{
+    padding:0;
+    margin:20px 10%;
+}
+
+#mainProducts .tab li{
+    margin:0 1%;
+    padding:0;
+    width:23%;
+	list-style: none;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    background-size: contain;
+}
+#mainProducts .tab .list-cat-1{
+    background: url(../images/product-cat-1.jpg) no-repeat;
+    
+}
+#mainProducts .tab .list-cat-2{
+    background: url(../images/product-cat-2.jpg) no-repeat;
+
+}
+#mainProducts .tab .list-cat-3{
+    background: url(../images/product-cat-3.jpg) no-repeat;
+
+}
+#mainProducts .tab .list-cat-4{
+    background: url(../images/product-cat-4.jpg) no-repeat;
+
+}
+#mainProducts .tab li a{
+    margin: 0;
+    padding:30px 0;
+	display: block;
+    text-decoration: none;
+    color:#FFF;
+    font-size: 1.8vw;
+    background-color: rgba(0,0,0, 0.67);
+    width:100%;
+    height:100%;
+}
+#mainProducts .tab .active a{
+    background-color: rgba(0,0,0, 0.24);
+}
+/*---- 製品一覧 ----*/
+.produtct-list{
+    margin:40px 10%;
+    width:80%;
+    color:#666666;
+    display: flex;
+    flex-wrap: wrap;
+}
+.produtct-list .list-item{
+    margin:0 2%;
+    width:21%;
+    position: relative;
+}
+.produtct-list .list-item a{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.produtct-list .list-item img{
+    width:100%;
+}
+.produtct-list .list-item .list-title{
+    font-weight: bold;
+    padding :10px 0;
+    text-align: center;
+}
+.produtct-list .list-item .list-body{
+    padding:5px 0 10px 0;
+}
+
+
+
+/*---- PC(小) 521～920 ----*/
+
+@media screen and (max-width: 920px) {
+    /*カテゴリタブを２列にする*/
+    #mainProducts .tab li{
+        margin:10px 3%;
+        width:44%;
+    }
+    #mainProducts .tab li a{
+        font-size: 18px;
+    }
+}
+
+/*---- スマホ ～520 ----*/
+
+@media screen and (max-width: 520px) {
+    /* 製品一覧のカラム落とし */
+    .produtct-list .list-item{
+        margin:0 5%;
+        width:90%;
+    }
+    #mainProducts .tab li a{
+        font-size: 15px;
+    }
+}
