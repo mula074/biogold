@@ -335,7 +335,7 @@ table tr:nth-child(odd){
     display: flex;
     align-items: center;
     /* 1.2vw標準で15px以上*/
-    font-size:max(1.2vw,15px);
+    font-size:max(1.2vw,12px);
 }
 .faq-list .a-item .a-text{
     flex:1250;
@@ -391,6 +391,8 @@ table tr:nth-child(odd){
         margin-bottom:30px;
         padding:10px 20px;
     }
+    
+
 }
 
 /*---- スマホ ～520 ----*/
@@ -441,5 +443,15 @@ table tr:nth-child(odd){
     .quarter{
         flex-direction: column;
     }
-
+    /*FAQのカラム落とし*/
+    .faq-list .q-item,
+    .faq-list .a-item{
+        flex-direction: column;
+        width:100%;
+    }
+    /* Questionのアコーディオンiconを変更*/
+    .faq-list .q-item .q-icon img{
+        width:20px;
+        margin:10px 0;
+    }
 }
