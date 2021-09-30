@@ -157,7 +157,9 @@
     width:100%;
     text-align: center;
     margin-bottom:40px;
+    overflow-wrap:break-word;
 }
+
 .basic-table p{
     display: inline-block;
     width:50%;
@@ -166,7 +168,11 @@
 table{
     display: inline-block;
     border-collapse:  collapse; /* セルの線を重ねる */
+    table-layout: fixed;
+    word-break: break-all;
+    word-wrap: break-all;
 }
+
 th,td {
     border: solid 1px #E3E3E3; /* 枠線指定 */
     padding:20px 30px;
@@ -178,12 +184,27 @@ td{
 td span{
     font-size: 12px;
 }
+
 th {
     background-color: #6C7B5A;
     color: #FFF;
 }
 .tr-g td{
     background-color: #F8F8F8;
+}
+
+/*1列のみテーブル*/
+.basic-table .one{
+    width:70%;
+    margin:0 15%;
+}
+.one td .title{
+    font-size:max(1.8vw,18px); 
+    margin-top:20px;
+    display: inline-block;
+}
+.one td p{
+    width:100%;
 }
 /*
 table tr:nth-child(odd){
@@ -205,7 +226,7 @@ table tr:nth-child(odd){
     padding:20px 40px;
 }
 /* ---- 特徴エリア -----*/
-#feature,#other{
+#feature,#other,#feature-trim-flower,#feature-maintenance{
     background-color: #F6F6F6;
     margin:40px 0;
     padding: 40px 0;
@@ -228,6 +249,17 @@ table tr:nth-child(odd){
     width:20%;
     height:1px;
     background-color: #707070;
+}
+.square-block .line100{
+    display: inline-block;
+    width:100%;
+    height:1px;
+    background-color: #707070;
+}
+.square-block .border-top{
+    margin-top:5px;
+    padding-top:5px;
+    border-top:1px solid #707070;
 }
 .square-block p{
     text-align: left;
@@ -292,6 +324,7 @@ table tr:nth-child(odd){
 .faq-list{
     width:80%;
     margin-left:10%;
+    margin-bottom:40px;
 }
 .faq-list .q-item,
 .faq-list .a-item{
@@ -365,6 +398,15 @@ table tr:nth-child(odd){
 .faq-list .q-item .q-icon img{
     width:calc(100% - 20px);
     min-width: 20px;
+}
+/*センタ―ボタン*/
+.center-button{
+    width:100%;
+    text-align: center;
+    margin:40px 0;
+}
+.center-button a{
+    text-align: left;
 }
 /*下矢印*/
 .under-arrow{
@@ -441,7 +483,7 @@ table tr:nth-child(odd){
     .product-info .half{
         width:100%;
     }
-    .product-info{
+    .product-info,.trim-info{
         flex-direction: column;
     }
     .product-info .product-content .btnarrow{
@@ -467,6 +509,9 @@ table tr:nth-child(odd){
         background-color: #FFF;
     }
     /* 通常テーブルは文字サイズ変更*/
+    .basic-table th{
+        font-size: 14px;
+    }
     .basic-table td{
         font-size: 12px;
     }

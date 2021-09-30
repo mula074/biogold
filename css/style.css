@@ -921,6 +921,12 @@ background-color: #1A1311;
 
 /*---- 汎用 ----*/
 
+.p0{
+    padding:0;
+}
+.m0{
+    margin:0;
+}
 .bg-gray {
     background-color: gray;
 }
