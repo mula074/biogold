@@ -1026,7 +1026,30 @@ background-color: #1A1311;
 .clearfix {
     display: block;
 }
+/*スマホのみ表示*/
+.only-sp{
+    display: none;
+}
+/*テーブル用*/
+.only-sp-tr{
+    display: none;
+}
+.only-sp-cell{
+    display: none;
+}
 
+
+/*---- PC(小) 521～920 ----*/
+
+@media screen and (max-width: 920px) {
+    /*スマホ用ナビに変更*/
+    .gnav {
+        display: none;
+    }
+    .gnav_sp {
+        display: block;
+    }
+}
 
 /*---- スマホ ～520 ----*/
 
@@ -1238,17 +1261,19 @@ background-color: #1A1311;
     #footerBottom{
         font-size: 10px;
     }
-}
-
-
-/*---- PC(小) 521～920 ----*/
-
-@media screen and (max-width: 920px) {
-    /*スマホ用ナビに変更*/
-    .gnav {
+    /* PCは表示　スマホ非表示*/
+    .only-pc{
         display: none;
     }
-    .gnav_sp {
+    /* PCは非表示　スマホ表示*/
+    .only-sp{
         display: block;
+    }
+    /*テーブル用*/
+    .only-sp-tr{
+        display: table-row;
+    }
+    .only-sp-cell{
+        display: table-cell;
     }
 }

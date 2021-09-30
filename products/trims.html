@@ -192,13 +192,13 @@
         <div class="topImg">
             <img src="../images/trims-top.jpg" alt="Biogold Collection">
         </div>
-        <div class="anker-link">
+        <div class="trim-anker-link">
             <ul>
-                <li>剪定はさみ200<img src="../images/arrow-line.svg" alt="⇒"> </li>
-                <li>剪定はさみ180<img src="../images/arrow-line.svg" alt="⇒"></li>
-                <li>花がら摘み<img src="../images/arrow-line.svg" alt="⇒"></li>
-                <li>お手入れセット<img src="../images/arrow-line.svg" alt="⇒"></li>
-                <li>お手入れ方法<img src="../images/arrow-line.svg" alt="⇒"></li>
+                <li>剪定はさみ200 </li>
+                <li>剪定はさみ180</li>
+                <li>花がら摘み</li>
+                <li>お手入れセット</li>
+                <li>お手入れ方法</li>
             </ul>
         </div>
         <div class="trim-info">
@@ -234,34 +234,47 @@
                     <th></th>
                     <th>剪定はさみ200</th>
                     <th>剪定はさみ180</th>
-                    <th>備考</th>
+                    <th class="only-pc">備考</th>
                 </tr>
                 <tr>
                   <td>寸　法</td>
                   <td>205mm×53mm</td>
                   <td>180mm×50mm</td>
-                  <td class="taling-l">※閉じたときの最大寸<br>
-                    ※完全手造りのため若干の個体差があります</td>
+                  <td class="taling-l only-pc">※閉じたときの最大寸<br>※完全手造りのため若干の個体差があります</td>
                 </tr>
                 <tr class="tr-g">
                   <td>重　量</td>
                   <td>238g</td>
                   <td>240g</td>
-                  <td>※完全手造りのため若干の個体差があります</td>
+                  <td class="only-pc">※完全手造りのため若干の個体差があります</td>
                 </tr>
                 <tr class="tr-g">
                   <td>材　質</td>
                   <td>安来青紙</td>
-                  <td>安来高級鋼</td>
+                  <td class="only-pc">安来高級鋼</td>
                   <td></td>
                 </tr>
+                <!-- スマホ=>備考表示 -->
+                <tr class="only-sp-tr">
+                    <td>備考(寸法)</td>
+                    <td colspan="2" class="taling-l">※閉じたときの最大寸<br> ※完全手造りのため若干の個体差があります</td>
+                </tr>
+                <tr class="only-sp-tr">
+                    <td>備考(重量)</td>
+                    <td colspan="2" class="taling-l">※完全手造りのため若干の個体差があります</td>
+                </tr>
+                <!-- PC=>colspan=3 / スマホ=>colspan=2に変更 -->
                 <tr>
                     <td>付 属 品</td>
-                    <td colspan="3">桐箱・お手入れセットミニ付</td>
+                    <td colspan="3" class="only-pc">桐箱・お手入れセットミニ付</td>
+                    <td colspan="2" class="only-sp-cell">桐箱・お手入れセットミニ付</td>
+                    
                 </tr>
                 <tr>
                     <td>名彫り</td>
-                    <td colspan="3">名彫りサービス（3文字まで/無料）</td>
+                    <td colspan="3" class="only-pc">名彫りサービス（3文字まで/無料）</td>
+                    <td colspan="2" class="only-sp-cell">名彫りサービス（3文字まで/無料）</td>
+                    
                 </tr>
               </table>
               <div class="clearfix"></div>
@@ -419,6 +432,44 @@
                   <div class="clearfix"></div>
             </div>
         </div>
+        <!-- お手入れセット -->
+        <div class="trim-info">
+            <div class="trim-content half">
+                <div class="trim-image">
+                    <img src="../images/mainenance-set.jpg" alt="剪定はさみ200">
+                </div>                
+            </div>
+            <div class="trim-content half">
+                <p class="trim-disc">
+                    純粋椿油&ケアクロス
+                </p>
+                <span class="trim-title">お手入れセット</span><br>
+                <span class="price">2,200円 (税抜価格2,000円)</span>
+                <div class="buy-button"><div class="button-area"><a href="#" class="btnarrow">購入はこちら</a></div></div>
+            </div>
+        </div>
+        <div class="anker"><p>スペック</p></div>
+         <!-- お手入れセットスペック -->
+         <div class="basic-table">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>純粋油50cc&ケアクロス1枚</th>
+                    <th>備考</th>
+                </tr>
+                <tr>
+                  <td>適　用</td>
+                  <td>刃物類・金属類の錆止め・潤滑</td>
+                  <td class="taling-l">※ケアクロスの色は写真と異なる場合があります</td>
+                </tr>
+                <tr class="tr-g">
+                  <td>椿 油 産 地</td>
+                  <td>五島列島産</td>
+                  <td></td>
+                </tr>
+              </table>
+              <div class="clearfix"></div>
+        </div>
         <!-- お手入れセットの特徴 -->
         <div id="feature-maintenance">
             <div class="anker"><p>お手入れセットの特徴</p></div>
@@ -463,21 +514,25 @@
             <div class="anker"><p>関連製品</p></div>
             <div class="quarter">
                 <div class="item">
-                    <img src="../images/kanren-classic.jpg" alt="">
-                    <span class="title">バイオゴールドの土</span>
-                    <p>「クラシック元肥」の効果を最大限に引き出します。森の土がお手本の土。</p>
+                    <img src="../images/kanren-trim1.jpg" alt="">
+                    <span class="title">剪定はさみ200</span>
+                    <p>剪定はさみ180よりも少し大き目なサイズ。切れ味抜群でスピーディーな選定作業を実現。</p>
                 </div>
                 <div class="item">
-                    <img src="../images/kanren-zero.jpg" alt="">
-                    <span class="title">ストレスZERO</span>
-                    <p>「バイオゴールドの土」が現代の住宅事情や異常気象などにも負けない土として進化。</p>
+                    <img src="../images/kanren-trim2.jpg" alt="">
+                    <span class="title">剪定はさみ180</span>
+                    <p>剪定はさみ200よりも少し小さめなサイズ。手が小さな女性にも手馴染み抜群。</p>
                 </div>
                 <div class="item">
-                    <img src="../images/kanren-bital.jpg" alt="">
-                    <span class="title">バイオゴールドバイタル</span>
-                    <p>「クラシック元肥」とあわせて使うことで、土壌改善効果や植物の活性化がより高まります。</p>
+                    <img src="../images/kanren-trim3.jpg" alt="">
+                    <span class="title">花がら摘み</span>
+                    <p>刃先が細く、こまかな作業もらくらく。寄せ植えやハンギングのお手入れにも</p>
                 </div>
-                <div class="item none-item"></div>
+                <div class="item">
+                    <img src="../images/kanren-trim4.jpg" alt="">
+                    <span class="title">お手入れセット</span>
+                    <p>のびのびと育った椿の実が材料の高純度椿油。一生もののはさみにぴったり。</p>
+                </div>
             </div>
             <div class="button-area"><a href="#" class="btnarrow">オンラインショップへ</a></div>
         </div>

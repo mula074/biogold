@@ -427,6 +427,22 @@ table tr:nth-child(odd){
 }
 
 /*　---- 剪定はさみページ ----　*/
+
+
+/*はさみのアンカーリンクボタン*/
+.trim-anker-link{
+    width:100%;
+    text-align: center;
+}
+.trim-anker-link ul{
+    display: inline-block;
+    list-style: none;
+}
+.trim-anker-link ul li{
+    display: block;
+    float:left;
+}
+/* はさみの商品ブロック */
 .trim-info{
     width:80%;
     margin-left:10%;
