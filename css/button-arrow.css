@@ -46,7 +46,6 @@
     /*アニメーションの指定*/
     transition: all .2s ease;
 }
-
 /*hoverした際の移動*/
 .btnarrow:hover::before{
 	right:-10px;

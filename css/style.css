@@ -345,6 +345,14 @@ h1 img {
     padding: 5px;
     font-size: 13px;
 }
+/*---- 下層ページトップ ----*/
+.topImg{
+    width:100%
+}
+.topImg img{
+    width:100%;
+}
+
 /*---- 資料請求 ----*/
 
 .gnav_docmentRecuest {
@@ -919,8 +927,91 @@ background-color: #1A1311;
     float: left;
 }
 
+/*----- 関連質問 FAQ ----*/
+.faq-list{
+    width:80%;
+    margin-left:10%;
+    margin-bottom:40px;
+}
+.faq-list .q-item,
+.faq-list .a-item{
+    display: flex;
+    margin:20px 0;
+}
+.faq-list .a-item{
+    border: 2px solid #E4EAE4;
+}
+.faq-list .q-item .q-title,
+.faq-list .a-item .a-title{
+    display: flex;
+    flex:168;
+    background: #6C7B5A;
+    text-align: center;
+    font-size:max(1.5vw,15px);
+    color: #FFF;
+    padding:10px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.faq-list .q-item .q-title .q-number{
+    width:100%;
+    display: inline-block;
+}
+.faq-list .a-item .a-title{
+    background-color: #E4EAE4;
+    color:#707070;
+}
+.faq-list .q-item .q-title span::first-letter,
+.faq-list .a-item .a-title span::first-letter{
+    /* 1.8vw標準で18px以上*/
+    font-size:max(2vw,18px);
+    font-weight: bold;
+}
+.faq-list .q-item .q-text,
+.faq-list .a-item .a-text{
+    flex:1150;
+    background: #F7F7F8;
+    display: flex;
+    align-items: center;
+    /* 1.2vw標準で15px以上*/
+    font-size:max(1.2vw,12px);
+}
+.faq-list .a-item .a-text{
+    flex:1250;
+    background: #FFF;
+    display: block;
+}
+.faq-list .a-item .a-text p{
+    margin: 0;
+    padding:20px 20px 10px 20px;
+    font-weight: bold;
+}
+.faq-list .q-item .q-text span,
+.faq-list .a-item .a-text span{
+    padding:10px 20px;
+}
+.faq-list .a-item .a-text span{
+    display: inline-block;
+}
+.faq-list .q-item .q-icon{
+    flex:50;
+    background: #F7F7F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10px;
+}
+.faq-list .q-item .q-icon img{
+    width:calc(100% - 20px);
+    min-width: 20px;
+}
+
 /*---- 汎用 ----*/
 
+.w100{
+    width: 100%;
+}
 .p0{
     padding:0;
 }
@@ -1009,6 +1100,23 @@ background-color: #1A1311;
       margin-right:15%;
       margin-bottom:10px;
   }
+/*下矢印*/
+.under-arrow{
+    width:100%;
+    text-align: center;
+    margin:30px 0;
+}
+.under-arrow img{
+    width:100%;
+    max-width: 40px;
+}
+/*トップに戻る*/
+.back-to-top{
+    width:80%;
+    text-align: right;
+    margin:30px 10%;
+    font-size:max(1.5vw,15px);
+}
 /*---- Clear fix ----*/
 
 .clearfix:after {
@@ -1276,4 +1384,81 @@ background-color: #1A1311;
     .only-sp-cell{
         display: table-cell;
     }
+    /*FAQのカラム落とし*/
+    .faq-list .q-item,
+    .faq-list .a-item{
+        flex-direction: column;
+        width:100%;
+    }
+    /* Questionのアコーディオンiconを変更*/
+    .faq-list .q-item .q-icon img{
+        width:20px;
+        margin:10px 0;
+    }
 }
+
+
+/* 検索フォーム用のCSS */
+/* --- 検索全体のBOX (サンプル用)--- */
+.searchArea{
+    /* width          : 290px;              /* BOXの幅               */ 
+    height         : 31px;               /* BOXの高さ             */
+    margin         : auto;               /* サンプルを中心に寄せ  */
+    letter-spacing : 0.1em;              /* 文字間隔              */
+    font-weight    : bold;               /* 太字                  */
+    line-height    : 0;                  /* 標準の行高さ          */
+  }
+   
+   /* --- テキスト入力欄のSTYLE設定 --- */
+  .searchArea .searchText {
+    display        : block;              /* ブロック化            */
+    float          : left;               /* 横並び                */
+    box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+    height         : 31px;               /* 入力の高さ            */
+    width          : 170px;              /* 入力の幅              */
+    margin         : 0;                  /* 外余白                */
+    padding        : 0 15px;             /* 内余白                */
+    border         : 2px solid #707070;  /* 枠線　幅,実践,色      */
+    border-radius  : 15px 0 0 15px;      /* 左上下の角丸          */
+    color          : #333;               /* 文字色                */
+    outline        : 0;                  /* 入力の薄い枠を非表示  */
+    font-size      : 19px;               /* フォントサイズ        */
+    width: calc(50% - 50px);
+    margin-left:25%;
+  }
+   
+   /* --- 検索ボタン欄のSTYLE設定 --- */
+  .searchArea .searchButton {
+    float          : left;               /* 横並び                */
+    box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+    height         : 31px;               /* 入力の高さ            */
+    margin         : 0;                  /* 外余白                */
+    /*padding        : 6px 10px;           /* 内余白                */
+    padding        : 6px 20px;
+    border         : none;               /* 枠線　幅,実践,色      */
+    border-radius  : 0 15px 15px 0;      /* 右上下の角丸          */
+    background     : #707070;            /* ボタンの色            */
+    color          : #fff;               /* 文字色                */
+    cursor         : pointer;            /* カーソル設定          */
+    line-height    : 19px;               /* 1行の高さ             */
+    font-size      : 19px;               /* フォントサイズ        */
+  }
+   
+   /* --- 検索ボタン欄にフォーカスか来たとき --- */
+  .searchArea .searchText:focus {
+    background     : #e8ecf0;            /* フォーカス時の背景色  */
+  }
+   
+   /* --- 検索ボタン内のアイコンSTYLE設定 --- */
+  .searchArea .searchImg {
+    display        : inline-block;       /* インラインブロック化  */
+    width          : auto;               /* 幅は高さに合わせる    */
+    height         : 19px;               /* 画像の高さ            */
+    margin         : 0 3px 0 0;          /* 余白                  */
+    vertical-align : middle;             /* 横の文字位置          */
+  }
+   
+   /* --- IEの入力エリア右側×消し -------------------------*/
+  .searchArea .searchText::-ms-clear {
+    display        : none;               /* ×を消す              */
+  }

@@ -1,9 +1,4 @@
-.topImg{
-    width:100%
-}
-.topImg img{
-    width:100%;
-}
+
 #mainProducts .title{
     text-align: center;
     margin-bottom:60px;
@@ -298,6 +293,8 @@ table tr:nth-child(odd){
 }
 .quarter .item img{
     width:100%;
+    height:15vw;
+    object-fit: contain;
 }
 #other .button-area{
     text-align: center;
@@ -315,90 +312,13 @@ table tr:nth-child(odd){
     background-color: #FBFBFB;
 }
 #other .button-area .btnarrow:hover::before{
+    /*矢印が白背景と同化するので半分から右をグラデーション*/
     background:linear-gradient(90deg, #FBFBFB 50%, #4B4B4B 100%);
 }
 #other .button-area .btnarrow:hover::after{
     background-color: #4B4B4B;
 }
-/*----- 関連質問 FAQ ----*/
-.faq-list{
-    width:80%;
-    margin-left:10%;
-    margin-bottom:40px;
-}
-.faq-list .q-item,
-.faq-list .a-item{
-    display: flex;
-    margin:20px 0;
-}
-.faq-list .a-item{
-    border: 2px solid #E4EAE4;
-}
-.faq-list .q-item .q-title,
-.faq-list .a-item .a-title{
-    display: flex;
-    flex:168;
-    background: #6C7B5A;
-    text-align: center;
-    font-size:max(1.5vw,15px);
-    color: #FFF;
-    padding:10px 30px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.faq-list .q-item .q-title .q-number{
-    width:100%;
-    display: inline-block;
-}
-.faq-list .a-item .a-title{
-    background-color: #E4EAE4;
-    color:#707070;
-}
-.faq-list .q-item .q-title span::first-letter,
-.faq-list .a-item .a-title span::first-letter{
-    /* 1.8vw標準で18px以上*/
-    font-size:max(2vw,18px);
-    font-weight: bold;
-}
-.faq-list .q-item .q-text,
-.faq-list .a-item .a-text{
-    flex:1150;
-    background: #F7F7F8;
-    display: flex;
-    align-items: center;
-    /* 1.2vw標準で15px以上*/
-    font-size:max(1.2vw,12px);
-}
-.faq-list .a-item .a-text{
-    flex:1250;
-    background: #FFF;
-    display: block;
-}
-.faq-list .a-item .a-text p{
-    margin: 0;
-    padding:20px 20px 10px 20px;
-    font-weight: bold;
-}
-.faq-list .q-item .q-text span,
-.faq-list .a-item .a-text span{
-    padding:10px 20px;
-}
-.faq-list .a-item .a-text span{
-    display: inline-block;
-}
-.faq-list .q-item .q-icon{
-    flex:50;
-    background: #F7F7F8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:0 10px;
-}
-.faq-list .q-item .q-icon img{
-    width:calc(100% - 20px);
-    min-width: 20px;
-}
+
 /*センタ―ボタン*/
 .center-button{
     width:100%;
@@ -408,23 +328,7 @@ table tr:nth-child(odd){
 .center-button a{
     text-align: left;
 }
-/*下矢印*/
-.under-arrow{
-    width:100%;
-    text-align: center;
-    margin:30px 0;
-}
-.under-arrow img{
-    width:100%;
-    max-width: 40px;
-}
-/*トップに戻る*/
-.back-to-top{
-    width:80%;
-    text-align: right;
-    margin:30px 10%;
-    font-size:max(1.5vw,15px);
-}
+
 
 /*　---- 剪定はさみページ ----　*/
 
@@ -432,16 +336,33 @@ table tr:nth-child(odd){
 /*はさみのアンカーリンクボタン*/
 .trim-anker-link{
     width:100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+  align-items: center;
 }
 .trim-anker-link ul{
-    display: inline-block;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin:40px 0;
+    padding:0;
 }
 .trim-anker-link ul li{
     display: block;
-    float:left;
+    padding:25px 20px;
+    border: 1px solid #707070;
+    text-align: center;
+    margin:10px 0;
 }
+.trim-anker-link ul li a{
+    text-decoration: none;
+    color: #4B4B4B;
+}
+.trim-anker-link ul li:hover{
+    border: 1px solid #EAEAEA;
+    background-color: #EAEAEA;
+}
+
 /* はさみの商品ブロック */
 .trim-info{
     width:80%;
@@ -450,11 +371,86 @@ table tr:nth-child(odd){
 }
 .trim-info .half{
     flex:1;
+    margin:0 10px;
 }
 .trim-info .trim-content img {
+    width:100%; 
+}
+.trim-disc{
+    color: #696969;
+    font-size:max(1.5vw,15px); 
+}
+.trim-title{
+    display: inline-block;
+    font-size:max(2vw,20px); 
+    margin:10px 20px 10px 0;
+}
+.trim-info .price{
+    color: #707070;
+    font-size:max(2vw,20px); 
+    display: inline-block;
+    margin:0 20px 30px 0;
+}
+.trim-info .price .small{
+    font-size:max(1.5vw,15px); 
+    margin-left:30px;
+}
+/* 剪定ばさみの購入ボタン */ 
+.trim-info .button-area{
     width:100%;
 }
+.trim-info .button-area .btnarrow{
+    padding-top:20px;
+    padding-bottom:20px;
+    width:calc(100% - 60px);
+    background-color: #4B4B4B;
+    color: #FFF;
+}
+.trim-info .button-area .btnarrow:hover{
+    background-color: #777777;
+}
 
+.trim-info .button-area .btnarrow::before{
+    background-color: #FFF;
+}
+.trim-info .button-area .btnarrow::after{
+    background-color: #FFF;
+    top:43%;
+}
+.trim-info .button-area .btnarrow:hover::before{
+    /*矢印が白背景と同化するので半分から右をグラデーション*/
+    background:linear-gradient(90deg, #FBFBFB 50%, #4B4B4B 100%);
+}
+/* PDFボタン*/
+.trim-info .button-area .btnarrow:hover::after{
+    background-color: #4B4B4B;
+}
+.pdf-button{
+    width:100%;
+    text-align: center;
+}
+.pdf-button a{
+    width:50%;
+    margin-top:40px;
+    padding:20px 0;
+    text-align: center;
+    display: inline-block;
+    background-color: #9A3D34;
+    border: 1px solid #9A3D34;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.5s;
+    font-size:max(1.5vw,15px); 
+}
+.pdf-button a:hover{
+    background-color: #FFF;
+    color: #9A3D34;
+    border: 1px solid #9A3D34;
+    transition: color 0.5s
+}
+#trim-flower .pdf-button a{
+    width:100%;
+}
 /*---- PC(小) 521～920 ----*/
 
 @media screen and (max-width: 920px) {
@@ -479,8 +475,6 @@ table tr:nth-child(odd){
         margin-bottom:30px;
         padding:10px 20px;
     }
-    
-
 }
 
 /*---- スマホ ～520 ----*/
@@ -531,18 +525,18 @@ table tr:nth-child(odd){
     .basic-table td{
         font-size: 12px;
     }
+    /* 関連製品のカラム落とし */
     .quarter{
         flex-direction: column;
     }
-    /*FAQのカラム落とし*/
-    .faq-list .q-item,
-    .faq-list .a-item{
-        flex-direction: column;
-        width:100%;
+    .quarter .item img{
+        height:auto;
     }
-    /* Questionのアコーディオンiconを変更*/
-    .faq-list .q-item .q-icon img{
-        width:20px;
-        margin:10px 0;
+    /*PDFボタン*/
+    .pdf-button a{
+        width: calc(80% - 20px);
+    }
+    .trim-flower .pdf-button a{
+        width: 100%;
     }
 }
