@@ -38,11 +38,20 @@
     position: relative;
     width:100%;
 }
+#faq .content .title h2{
+    color:#666666;
+    font-size: max(2.5vw,30px);
+}
+#faq .content .title h3{
+    color:#BDBEBF;
+    margin-top:8px;
+}
 /* タグ */
 .tag{
     list-style: none;
     width:80%;
     margin:30px 10%;
+    padding:0;
 }
 .tag li{
     float: left;

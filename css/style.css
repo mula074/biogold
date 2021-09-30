@@ -583,12 +583,12 @@ h1 img {
 }
 .title h2{
     font-weight: normal;
-    font-size: 4.5vw;
+    font-size:max(4.5vw ,35px);
     margin: 1em 0 0.3em 0;
 }
 .title h3{
     font-weight: normal;
-    font-size: 1.3vw;
+    font-size:max(1.3vw ,15px);
     color:#777777;
 }
 #mainNews .tab{
