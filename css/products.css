@@ -122,11 +122,13 @@
     font-size: max(2.5vw,21px);
     font-weight: bold;
 }
+
+
 .product-info .product-content .under-title{
     font-size: max(1.5vw,15px);
 }
 .product-info .product-content .recomend{
-    font-size: max(1.2vw,12px);
+    font-size: max(1.2vw,11px);
 }
 .product-info .product-content .btnarrow{
     width:50%;
