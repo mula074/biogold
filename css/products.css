@@ -116,17 +116,17 @@
     width:100%;
 }
 .product-info .product-content .sub-title{
-    font-size: 1.3vw;
+    font-size: max(1.3vw,11px);
 }
 .product-info .product-content .title{
-    font-size: 2.5vw;
+    font-size: max(2.5vw,21px);
     font-weight: bold;
 }
 .product-info .product-content .under-title{
-    font-size: 1.5vw;
+    font-size: max(1.5vw,15px);
 }
 .product-info .product-content .recomend{
-    font-size: 1.2vw;
+    font-size: max(1.2vw,12px);
 }
 .product-info .product-content .btnarrow{
     width:50%;
