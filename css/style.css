@@ -765,12 +765,16 @@ h1 img {
     margin:0;
     font-weight: normal;
     font-size: 4.2vw;
+    font-size:max(4.2vw ,30px);
     letter-spacing: 0.1em;
 }
 #contact h3{
     letter-spacing: 0.2em;
     font-weight: normal;
-    font-size: 1.5vw;
+    font-size:max(1.5vw ,15px);
+}
+#contact p{
+    margin-top:40px;
 }
 #contact .button-colmun{
     display: flex;
@@ -1397,6 +1401,50 @@ background-color: #1A1311;
     }
 }
 
+/*追従バナー*/
+.floating-banner{
+    position: fixed;
+    right:0;
+    top:250px;
+    width:50px;
+    z-index:100;
+    text-align: center;
+    padding-top:30px;
+}
+.floating-banner::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    
+    /*四角形を傾けます*/
+    transform: skewY(-35deg);
+    transform-origin: top right;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    background:#302D2C;
+  }
+.floating-banner img{
+    width:60%;
+    margin: 10px 20%;
+}
+
+.floating-banner a{
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    color:#FFF;
+    font-size: 15px;
+}
+.banner-2{
+    top:460px;
+}
+.banner-2::after{
+    background-color: #BDBEBF;
+}
+.banner-2 a{
+    color: #1A1311;
+}
 
 /* 検索フォーム用のCSS */
 /* --- 検索全体のBOX (サンプル用)--- */
