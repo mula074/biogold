@@ -459,7 +459,7 @@ h1 img {
     display: flex;
     width: 21%;
     color: white;
-    font-size: 2.8vw;
+    font-size: max(2.8vw,15px);
     text-align: center;
     letter-spacing: 0.1em;
     justify-content: center;
@@ -472,26 +472,9 @@ h1 img {
     display: flex;
     align-items: center;
 }
-
-#topNews dl {
-    width:100%;
-    flex-wrap: wrap;
-    margin:0;
-    display: block;
-}
-
-#topNews dl dt {
-    width: 15%;
-    padding-left: 3%;
-    font-size: 1.5vw;
-    white-space: nowrap;
-    float: left;
-}
-#topNews dl dd {
-    font-size: 15px;
-    width: 82%;
-    margin: 0;
-    font-size: 1.5vw;
+#topNews .content span{
+    font-size: max(2.1vw,12px);
+    padding-left:5%;
 }
 
 /*---- About Us ----*/
@@ -536,9 +519,7 @@ h1 img {
     height:100%;
     z-index: -1;
 }
-#about-select .select-space{
-/**/
-}
+
 #about-select .select-list{
     display: flex;
     padding-top:10%;
@@ -1196,12 +1177,6 @@ background-color: #1A1311;
     .hero_text {
         font-size: 9vw;
     }
-    #topNews dl dt{
-        font-size: 11px;
-    }
-    #topNews dl dd{
-        font-size: 11px;
-    }
     /*About Us をカラム落とし*/
     #about{
         margin-top:50px;
@@ -1241,11 +1216,6 @@ background-color: #1A1311;
     #about-select .button-area a{
         font-size: 16px;
     }
-
-    /*topNewsの幅調整*/
-    #topNews dl dt { width:20%}
-    #topNews dl dd { width:77%}
-   
     /* About Us の背景を非表示*/
     #about-select .back-img{
         display: none;
@@ -1274,6 +1244,13 @@ background-color: #1A1311;
     /* タブニュース */
     #mainNews {
         margin: 0 5%;
+    }
+    #mainNews .tab{
+        /*タブを左揃え*/
+        justify-content: flex-start;
+    }
+    #mainNews .tab li a{
+       padding:10px 5px;
     }
     #mainNews .area ul{
         margin: 0;
@@ -1406,7 +1383,9 @@ background-color: #1A1311;
     position: fixed;
     right:0;
     top:250px;
-    width:50px;
+    width:10vw;
+    max-width: 50px;
+    min-width: 40px;
     z-index:100;
     text-align: center;
     padding-top:30px;
@@ -1437,7 +1416,7 @@ background-color: #1A1311;
     font-size: 15px;
 }
 .banner-2{
-    top:460px;
+    top:435px;
 }
 .banner-2::after{
     background-color: #BDBEBF;
