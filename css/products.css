@@ -130,17 +130,78 @@
 }
 .product-info .product-content .btnarrow{
     width:50%;
+    background-color: #4B4B4B;
+    color:#FFF;
+    padding-top:13px;
+    padding-bottom:13px;
+}
+.product-info .product-content .btnarrow:hover{
+    background-color: #707070;
+}
+.product-info .product-content .btnarrow::before{
+    background-color: #FFF;
+}
+.product-info .product-content .btnarrow::after{
+    background-color: #FFF;
+}
+.product-info .product-content .btnarrow:hover::before{
+    /*矢印が白背景と同化するので半分から右をグラデーション*/
+    background:linear-gradient(90deg, #FBFBFB 50%, #4B4B4B 100%);
+}
+.product-info .product-content .btnarrow:hover::after{
+    background-color: #4B4B4B;
 }
 .product-info .product-content .pro-button a{
     width:90%;
     margin-top:20px;
-    padding:10px 0%;
+    padding:13px 0%;
     display: block;
     text-decoration: none;
     color:#4B4B4B;
     background-color: #fff;
     border: 1px solid #4B4B4B;
     text-align: center;
+    transition: 0.3s;
+}
+.product-info .product-content .pro-button a:hover{
+    background-color: #EAEAEA;
+    border-color:#EAEAEA ;
+    transition: 0.3s;
+}
+
+/*アンカーリンクのリスト*/
+.anker-link {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.anker-link ul{
+    max-width:90%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    padding:0 3vw;
+    flex-wrap: wrap;
+}
+.anker-link ul li{
+    padding:10px 10px 7px 10px;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+    white-space: nowrap;
+    font-size:max(1.2vw,11px);
+    flex:1;
+    text-align: left;
+    display: inline-block;
+}
+.anker-link ul li a{
+    text-decoration: none;
+    color: #696969;
+}
+.anker-link ul li img{
+    width:1.8vw;
+    min-width: 20px;
 }
 
 /*---- スペック用のテーブル ----*/
@@ -259,6 +320,7 @@ table tr:nth-child(odd){
 .square-block p{
     text-align: left;
     line-height: 1.8em;
+    font-size: max(1.3vw,14px);
 }
 .square-block img{
     width:100%;
@@ -465,6 +527,7 @@ table tr:nth-child(odd){
     /*テーブルの補足*/
     .basic-table p{
         width:90%;
+        font-size: max(1.3vw,14px);
     }
     /* 4津並びの幅調整 */
     .quarter{
