@@ -1,8 +1,6 @@
 //*********私達についてのHover時 *********/
 //ドロップダウンメニューの表示
 $(document).on("click", ".show-subMenu a", function(){
-    console.log("ff");
-    
     if($(".gnav-about").css("display")=="none"){
         $('.gnav-about').fadeIn();
     }else{
@@ -51,6 +49,7 @@ $(function () {
     $(window).scroll(function () {
         const wHeight = $(window).height();
         const scrollAmount = $(window).scrollTop();
+        //スクロールでfade-b要素表示で実行
         $('.fade-b').each(function () {
             const targetPosition = $(this).offset().top;
             if(scrollAmount > targetPosition - wHeight + 60) {
@@ -64,6 +63,7 @@ $(function () {
     $(window).scroll(function () {
         const wHeight = $(window).height();
         const scrollAmount = $(window).scrollTop();
+        //スクロールでfade-r要素表示で実行
         $('.fade-r').each(function () {
             const targetPosition = $(this).offset().top;
             if(scrollAmount > targetPosition - wHeight + 60) {
@@ -77,6 +77,7 @@ $(function () {
     $(window).scroll(function () {
         const wHeight = $(window).height();
         const scrollAmount = $(window).scrollTop();
+        //スクロールでfade-l要素表示で実行
         $('.fade-l').each(function () {
             const targetPosition = $(this).offset().top;
             if(scrollAmount > targetPosition - wHeight + 60) {
@@ -85,9 +86,7 @@ $(function () {
         });
     });
 });
-
 //*********タブ分けメニュー*********
-
 //任意のタブにURLからリンクするための設定
 function GethashID (hashIDName){
 	if(hashIDName){
@@ -105,15 +104,6 @@ function GethashID (hashIDName){
 		});
 	}
 }
-
-//タブをクリックしたら
-$(document).on("click", "#mainNews a", function(){
-	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-	GethashID (idName);//設定したタブの読み込みと
-	return false;//aタグを無効にする
-});
-
-
 // 上記の動きをページが読み込まれたらすぐに動かす
 $(window).on('load', function () {
     $('.tab li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
@@ -121,29 +111,20 @@ $(window).on('load', function () {
 	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
 	GethashID (hashName);//設定したタブの読み込み
 });
-
-//*********タブ分けメニュー(製品案内)*********
-
-//任意のタブにURLからリンクするための設定
-function GethashID (hashIDName){
-	if(hashIDName){
-		//タブ設定
-		$('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
-			var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#cat-1の値を取得	
-			if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#all←この#の値とタブ内のリンク名（例）#cat-1が同じかをチェック
-				var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
-				$('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
-				$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
-				//表示させるエリア設定
-				$(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
-			}
-		});
-	}
-}
-
-//タブをクリックしたら
+//タブ範囲(トップニュース)
+$(document).on("click", "#mainNews a", function(){
+	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+	GethashID (idName);//設定したタブの読み込みと
+	return false;//aタグを無効にする
+});
+//タブ範囲(製品案内)
 $(document).on("click", "#mainProducts .tab a", function(){
+	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+	GethashID (idName);//設定したタブの読み込みと
+	return false;//aタグを無効にする
+});
+//タブ範囲(製品案内)
+$(document).on("click", "#faq .tab a", function(){
 	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
 	GethashID (idName);//設定したタブの読み込みと
 	return false;//aタグを無効にする
@@ -182,12 +163,64 @@ $(function(){
   });
   //アンカーリンクはスクロール
   $(function(){
-    $('a[href^=#]').click(function() {
-    var speed = 500; // スクロール速度(ミリ秒)
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $('html').animate({scrollTop:position}, speed, 'swing');
-    return false;
+    $('a[href^=#anker]').click(function() {
+        console.log(href);
+        var speed = 500; // スクロール速度(ミリ秒)
+        var href = $(this).attr("href");
+        href = href.replace(/anker-/g, ''); //anker-を抜く
+        console.log(href);
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('html').animate({scrollTop:position}, speed, 'swing');
+        return false;
     });
     });
+
+    //アコーディオン表示 or 非表示
+    $(function () {
+        //ac-childは初期で非表示
+        $('.ac-child').hide();        
+        $('.ac-parent').on('click', function () {
+        $(this).next().slideToggle();
+      });
+    });
+/** 追従バナーをフッターに固定 **/
+$(function () {
+    var throwContactPosi = 0;
+    $(window).scroll(function () {
+        const wHeight = $(window).height();
+        const scrollAmount = $(window).scrollTop();
+        //#content を通過した時点で追従をストップ
+        if ($('#contact').position().top < $('.banner-1').position().top ) {
+            var posi = $('#contact').position().top;
+            $(".floating-banner").addClass("banner-stop");
+            $('.banner-1').css('top',posi);
+            $('.banner-2').css('top',posi + 185);
+            //通過した時のwindow位置を取得
+            throwContactPosi = scrollAmount;
+        }
+        //Contact位置より上にスクロールした場合は再度追従する
+        console.log(scrollAmount);
+        console.log(throwContactPosi);
+        if(throwContactPosi > scrollAmount){
+            $('.banner-1').css('top',"");
+            $('.banner-2').css('top',"");
+            $(".floating-banner").removeClass("banner-stop");
+        }
+
+        /*$('#contact').each(function () {
+            const targetPosition = $(this).offset().top;
+            if(scrollAmount > targetPosition ){// - wHeight + 165) {
+                $(".floating-banner").addClass("banner-stop");
+                var posi = $('#footerBox').position().top - 448;
+                $('.banner-1').css('top',targetPosition);
+                $('.banner-2').css('top',posi + 185);
+            }else{
+                $('.banner-1').css('top',"");
+                $('.banner-2').css('top',"");
+                $(".floating-banner").removeClass("banner-stop");
+                
+            }
+        });*/
+    });
+});

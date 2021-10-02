@@ -1037,10 +1037,14 @@ h1 img {
     min-width: 20px;
 }
 
+
 /*---- 汎用 ----*/
 
 .w100{
     width: 100%;
+}
+.c-red{
+    color: #9A3D34;
 }
 .p0{
     padding:0;
@@ -1147,6 +1151,7 @@ h1 img {
     margin:30px 10%;
     font-size:max(1.5vw,15px);
 }
+
 /*---- Clear fix ----*/
 
 .clearfix:after {
@@ -1434,6 +1439,10 @@ h1 img {
     z-index:100;
     text-align: center;
     padding-top:30px;
+}
+/*追従バナーのストップ*/
+.banner-stop{
+    position: absolute;
 }
 .floating-banner::after{
     content: '';

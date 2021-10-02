@@ -328,6 +328,27 @@ table tr:nth-child(odd){
     width:100%;
     margin:30px 0;
 }
+/*サポートボタン*/
+.support-button{
+    width:80%;
+    margin:20px 10%;
+    padding:10px 0;
+    text-align: center;
+    position: relative;
+    background-color: #EAEAEA;
+}
+.support-button a{
+    display: block;
+    left:0;
+    top:0;
+    text-decoration: none;
+    color: #4B4B4B;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
 /* ---- 関連商品 ---- */
 .quarter{
     width:70%;
@@ -402,7 +423,7 @@ table tr:nth-child(odd){
     width:100%;
     display: flex;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 .trim-anker-link ul{
     list-style: none;
@@ -410,13 +431,15 @@ table tr:nth-child(odd){
     flex-wrap: wrap;
     margin:40px 0;
     padding:0;
+    align-content: stretch;
 }
 .trim-anker-link ul li{
     display: block;
     padding:25px 20px;
     border: 1px solid #707070;
     text-align: center;
-    margin:10px 0;
+    flex:1;
+    white-space: nowrap;
 }
 .trim-anker-link ul li a{
     text-decoration: none;
@@ -515,6 +538,20 @@ table tr:nth-child(odd){
 #trim-flower .pdf-button a{
     width:100%;
 }
+
+/*保管方法*/
+.how-to-keep{
+    border:1px solid #484848;
+    padding:20px 50px;
+}
+
+/* ---- 希釈液の作り方---- */
+.diluted{
+    margin:40px 7.5%;
+    padding:20px 7.5%;
+    width:70%;
+
+}
 /*---- PC(小) 521～920 ----*/
 
 @media screen and (max-width: 920px) {
@@ -571,7 +608,8 @@ table tr:nth-child(odd){
         width:100%;
     }
     .spec table,table{
-        width:90%;
+        width:auto;
+        max-width: 90%;
     }
     /* テーブルのセル幅 */
     .spec th,.spec td {
@@ -587,9 +625,11 @@ table tr:nth-child(odd){
     /* 通常テーブルは文字サイズ変更*/
     .basic-table th{
         font-size: 14px;
+        padding:10px 7px;
     }
     .basic-table td{
         font-size: 12px;
+        padding:10px 7px;
     }
     /* 関連製品のカラム落とし */
     .quarter{
@@ -604,5 +644,9 @@ table tr:nth-child(odd){
     }
     .trim-flower .pdf-button a{
         width: 100%;
+    }
+    /*オンラインショップボタン*/
+    #other .button-area a{
+        width:60%;
     }
 }

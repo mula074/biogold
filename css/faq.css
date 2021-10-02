@@ -68,6 +68,26 @@
     color:#4B4B4B;
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
 }
+/*---- タブ切り替え ----*/
+#faq .tab .active a{
+    color: #1C1C1C;
+    background-color: rgba(255,255,255, 0.60);
+}
+#faq .area{
+    display: none;/*はじめは非表示*/
+}
+#faq .area.is-active{
+    display: block;
+    animation: show .5s linear 0s;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 
 /*---- スマホサイズ幅 ～520 ----*/
