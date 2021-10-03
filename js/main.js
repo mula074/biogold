@@ -182,6 +182,18 @@ $(function(){
         $('.ac-child').hide();        
         $('.ac-parent').on('click', function () {
         $(this).next().slideToggle();
+        //画像パス取得
+        var imgs = ["minas-icon-b.svg","plus-icon-b.svg"];
+        var src  = $(".q-icon",this).children('img').attr('src');
+        var tarr = src.split('/');      // 分割
+        var file = tarr[tarr.length-1]; //最後の要素が画像名
+        //画像をスイッチさせる
+        console.log(file);
+        if(file == imgs[0]){
+            $(".q-icon",this).children('img').attr('src', '../images/' + imgs[1]);
+        }else{
+            $(".q-icon",this).children('img').attr('src', '../images/' + imgs[0]);
+        }
       });
     });
 /** 追従バナーをフッターに固定 **/
@@ -200,27 +212,10 @@ $(function () {
             throwContactPosi = scrollAmount;
         }
         //Contact位置より上にスクロールした場合は再度追従する
-        console.log(scrollAmount);
-        console.log(throwContactPosi);
         if(throwContactPosi > scrollAmount){
             $('.banner-1').css('top',"");
             $('.banner-2').css('top',"");
             $(".floating-banner").removeClass("banner-stop");
         }
-
-        /*$('#contact').each(function () {
-            const targetPosition = $(this).offset().top;
-            if(scrollAmount > targetPosition ){// - wHeight + 165) {
-                $(".floating-banner").addClass("banner-stop");
-                var posi = $('#footerBox').position().top - 448;
-                $('.banner-1').css('top',targetPosition);
-                $('.banner-2').css('top',posi + 185);
-            }else{
-                $('.banner-1').css('top',"");
-                $('.banner-2').css('top',"");
-                $(".floating-banner").removeClass("banner-stop");
-                
-            }
-        });*/
     });
 });

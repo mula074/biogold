@@ -38,22 +38,25 @@
     text-align: center;
     font-weight: bold;
     display: block;
-    background-size: contain;
 }
 #mainProducts .tab .list-cat-1{
     background: url(../images/product-cat-1.jpg) no-repeat;
+    background-size: cover;
     
 }
 #mainProducts .tab .list-cat-2{
     background: url(../images/product-cat-2.jpg) no-repeat;
+    background-size: cover;
 
 }
 #mainProducts .tab .list-cat-3{
     background: url(../images/product-cat-3.jpg) no-repeat;
+    background-size: cover;
 
 }
 #mainProducts .tab .list-cat-4{
     background: url(../images/product-cat-4.jpg) no-repeat;
+    background-size: cover;
 
 }
 #mainProducts .tab li a{
@@ -539,6 +542,12 @@ table tr:nth-child(odd){
     width:100%;
 }
 
+/*使用方法*/
+.how-to-use{
+    padding:0;
+    width:80%;
+    margin-left:10%;
+}
 /*保管方法*/
 .how-to-keep{
     border:1px solid #484848;
