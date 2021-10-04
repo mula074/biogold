@@ -86,6 +86,8 @@ $(function () {
         });
     });
 });
+
+
 //*********タブ分けメニュー*********
 //任意のタブにURLからリンクするための設定
 function GethashID (hashIDName){
@@ -134,6 +136,9 @@ $(document).on("click", "#faq .tab a", function(){
 $(function(){
     $('.owl-carousel').owlCarousel({
             loop:true,　//項目をループさせる
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true,
             margin:10,  //itemの間隔
             items: 4,   //表示する項目数
 			responsive: { // レスポンシブ
@@ -152,7 +157,6 @@ $(function(){
 			  },
         })
 });
-
 ///トップへ戻る
 $(function(){
     var pagetop = $('#page_top');
@@ -163,7 +167,7 @@ $(function(){
   });
   //アンカーリンクはスクロール
   $(function(){
-    $('a[href^=#anker]').click(function() {
+    $("a[href^=#anker]").click(function() {
         console.log(href);
         var speed = 500; // スクロール速度(ミリ秒)
         var href = $(this).attr("href");
@@ -182,20 +186,52 @@ $(function(){
         $('.ac-child').hide();        
         $('.ac-parent').on('click', function () {
         $(this).next().slideToggle();
-        //画像パス取得
-        var imgs = ["minas-icon-b.svg","plus-icon-b.svg"];
-        var src  = $(".q-icon",this).children('img').attr('src');
-        var tarr = src.split('/');      // 分割
-        var file = tarr[tarr.length-1]; //最後の要素が画像名
-        //画像をスイッチさせる
-        console.log(file);
-        if(file == imgs[0]){
-            $(".q-icon",this).children('img').attr('src', '../images/' + imgs[1]);
-        }else{
-            $(".q-icon",this).children('img').attr('src', '../images/' + imgs[0]);
+        //画像を入れ替える
+        var className = $(this).attr("class"); 
+        //FAQ
+        if(className.indexOf("q-item") > -1){
+            SwitchImageFaq(this);
+        }
+        //スマホメニュー
+        if(className.indexOf("sp-icon") > -1){
+            SwitchImageSP(this);
         }
       });
     });
+    //FAQのアイコン画像変更
+    function SwitchImageFaq (_this){
+        //画像パス取得
+        var imgs = ["minas-icon-b.svg","plus-icon-b.svg"];
+        //FAQ
+        var src  = $(".q-icon",$(_this)).children('img').attr('src');
+        var tarr = src.split('/');      // 分割
+        var file = tarr[tarr.length-1]; //最後の要素が画像名
+        //画像をスイッチさせる
+        //FAQのアイコン
+        if(file == imgs[0]){
+            $(".q-icon",_this).children('img').attr('src', '../images/' + imgs[1]);
+        }else{
+            $(".q-icon",_this).children('img').attr('src', '../images/' + imgs[0]);
+        }
+    }
+    //スマホのアイコン画像変更
+    function SwitchImageSP (_this){
+        //画像パス取得
+        var imgs = ["minas-icon.svg","plus-icon.svg"];
+        //FAQ
+        var src  = $(".icon",$(_this)).children('img').attr('src');
+        var tarr = src.split('/');      // 分割
+        var file = tarr[tarr.length-1]; //最後の要素が画像名
+        //画像をスイッチさせる
+        //FAQのアイコン
+        if(file == imgs[0]){
+            console.log(src);
+            $(".icon",_this).children('img').attr('src', tarr[0] + "/" + tarr[1] + "/" + imgs[1]);
+        }else{
+            console.log(src);
+            $(".icon",_this).children('img').attr('src', tarr[0] + "/" + tarr[1] + "/" + imgs[0]);
+        }
+    }
 /** 追従バナーをフッターに固定 **/
 $(function () {
     var throwContactPosi = 0;
