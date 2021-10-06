@@ -1,0 +1,42 @@
+#newsPage{
+}
+#newsPage .contents{
+    display: flex;
+    width:100%;
+}
+#newsPage .title{
+    font-size: max(4.5vw,35px);
+    font-weight: bold;
+    text-align: center;
+    margin:1em 0 0.3em 0;
+}
+#newsPage .disc{
+    font-size: max(1.3vw ,15px);
+    color:#777777;
+    text-align: center;
+}
+/*---- メインコンテンツ -----*/
+#newsPage .main-contents{
+    flex:7;
+}
+/*---- サイドコンテンツ-----*/
+#newsPage .side-contents{
+    flex:3;
+    text-align: center;
+}
+#newsPage .side-contents .title{
+    font-size: max(2.3vw ,15px);
+    font-weight: bold;
+}
+#newsPage .side-contents .cat-ul{
+    text-align: left;
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+#newsPage .side-contents .cat-ul li{
+    display: inline-block;
+    width:80%;
+    margin-left:10%;
+    padding:5px 5px;
+}

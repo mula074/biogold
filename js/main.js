@@ -1,34 +1,142 @@
-//*********私達についてのHover時 *********/
-//ドロップダウンメニューの表示
-$(document).on("click", ".show-subMenu a", function(){
-    if($(".gnav-about").css("display")=="none"){
-        $('.gnav-about').fadeIn();
-    }else{
-        $('.gnav-about').fadeOut();
-   }
-   //Hoverのフラグ
-   $('.gnav-about').hover(function(){
-    isOver = true;
-  }, function(){
-    isOver = false;
-  }); 
-
-   // メニュー領域外をクリックしたらメニューを閉じる
-    $('body').click(function() {
-        if (isOver == false) {
-            $('.gnav-about').fadeOut();
-         }
+//*********ナビのサブメニュー表示 *********/
+$(function(){
+    //リンクhoverで他のサブメニューは非表示
+    $('.gnav_lowerMenu a').mouseover(function() {
+        $('.hover-menu').hide();
     });
-    return false;//aタグを無効にする
-});
+    //*********私達についてのHover時 *********/
+    $('.nav-about a').mouseover(function() {
+        $('#sub-menu-about').fadeIn();
+    }).mouseout(function() {
+        let array = [];
+        jQuery(":hover").each(function () { //カーソル位置の全要素を走査
+            array.push($(this).attr("class"));
+        });
+
+        if ($.inArray('gnav_main_block', array) >= 0 ){
+            return ;
+        }
+        if ($.inArray('#sub-menu-about', array) >= 0 ){
+            return ;
+        }
+        console.log(array);
+        $('#sub-menu-about').fadeOut();
+     
+    });
+    $('#sub-menu-about').hover(function() {
+        //$('.gnav-about').fadeOut();
+    },function() {
+        $('#sub-menu-about').fadeOut();
+    });
+
+    //*********製品案内のHover時 *********/
+    $('.nav-product a').mouseover(function() {
+        $('#sub-menu-product').fadeIn();
+    }).mouseout(function() {
+        let array = [];
+        jQuery(":hover").each(function () { //カーソル位置の全要素を走査
+            array.push($(this).attr("class"));
+        });
+
+        if ($.inArray('gnav_main_block', array) >= 0 ){
+            return ;
+        }
+        if ($.inArray('#sub-menu-product', array) >= 0 ){
+            return ;
+        }
+        console.log(array);
+        $('#sub-menu-product').fadeOut();
+     
+    });
+    $('#sub-menu-product').hover(function() {
+        //$('.gnav-about').fadeOut();
+    },function() {
+        $('#sub-menu-product').fadeOut();
+    });
+
+    //*********コンテンツのHover時 *********/
+    $('.nav-contents a').mouseover(function() {
+        $('#sub-menu-contents').fadeIn();
+    }).mouseout(function() {
+        let array = [];
+        jQuery(":hover").each(function () { //カーソル位置の全要素を走査
+            array.push($(this).attr("class"));
+        });
+
+        if ($.inArray('gnav_main_block', array) >= 0 ){
+            return ;
+        }
+        if ($.inArray('#sub-menu-contents', array) >= 0 ){
+            return ;
+        }
+        console.log(array);
+        $('#sub-menu-contents').fadeOut();
+     
+    });
+    $('#sub-menu-contents').hover(function() {
+        //$('.gnav-about').fadeOut();
+    },function() {
+        $('#sub-menu-contents').fadeOut();
+    });
+
+    //*********会社案内のHover時 *********/
+    $('.nav-company a').mouseover(function() {
+        $('#sub-menu-company').fadeIn();
+    }).mouseout(function() {
+        let array = [];
+        jQuery(":hover").each(function () { //カーソル位置の全要素を走査
+            array.push($(this).attr("class"));
+        });
+
+        if ($.inArray('gnav_main_block', array) >= 0 ){
+            return ;
+        }
+        if ($.inArray('#sub-menu-company', array) >= 0 ){
+            return ;
+        }
+        console.log(array);
+        $('#sub-menu-company').fadeOut();
+     
+    });
+    $('#sub-menu-company').hover(function() {
+        //$('.gnav-about').fadeOut();
+    },function() {
+        $('#sub-menu-company').fadeOut();
+    });
+    
+  });
+  
+
+//ドロップダウンメニューの表示 .show-subMenu a
+/*$(function() {
+    var isOver = false;
+    var isOver2 = false;
+    $('.show-subMenu a').hover(function() {
+        $('.gnav-about').fadeIn();
+        isOver = true;
+        //Hoverのフラグ
+        $('.gnav-about').hover(function(){
+            isOver = true;
+        }, function(){
+            isOver = false;
+        }); 
+
+        // メニュー領域外をクリックしたらメニューを閉じる
+        if (isOver == false) {
+            $('.gnav-about').fadeOut();        
+        }else{
+            $('.gnav-about').fadeIn();
+        }
+    });
+});*/
 // メニュー領域外をクリックしたらメニューを閉じる
-$('body').click(function() {
+//$('body').click(function() {
     //if (over_flg == false) {
     //  $('span').removeClass('selected');
     //  $('ul').slideUp('fast');
     // }
     $('.gnav-about').fadeOut();
-  });
+ // });
 
 //*********スマホメニュースライド  *******/
 $(document).on("click", ".gnav_sp_menu", function(){
@@ -137,7 +245,7 @@ $(function(){
     $('.owl-carousel').owlCarousel({
             loop:true,　//項目をループさせる
             autoplay:true,
-            autoplayTimeout:1000,
+            autoplayTimeout:3000,
             autoplayHoverPause:true,
             margin:10,  //itemの間隔
             items: 4,   //表示する項目数
@@ -160,6 +268,11 @@ $(function(){
 ///トップへ戻る
 $(function(){
     var pagetop = $('#page_top');
+    pagetop.click(function () {
+       $('body, html').animate({ scrollTop: 0 }, 500);
+       return false;
+    });
+    var pagetop = $('.back-to-top');
     pagetop.click(function () {
        $('body, html').animate({ scrollTop: 0 }, 500);
        return false;
@@ -239,8 +352,8 @@ $(function () {
         const wHeight = $(window).height();
         const scrollAmount = $(window).scrollTop();
         //#content を通過した時点で追従をストップ
-        if ($('#contact').position().top < $('.banner-1').position().top ) {
-            var posi = $('#contact').position().top;
+        if ($('#prosite').position().top < $('.banner-1').position().top ) {
+            var posi = $('#prosite').position().top;
             $(".floating-banner").addClass("banner-stop");
             $('.banner-1').css('top',posi);
             $('.banner-2').css('top',posi + 185);

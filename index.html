@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/button-arrow.css">
-    <link rel="stylesheet" type="text/css" href="owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/slide.css">
     <link rel="stylesheet" type="text/css" href="css/style.css?20210927_1">  
@@ -41,12 +41,12 @@
                         <!-- end of gnav_main_block -->
                         <div class="gnav_main_block">
                             <ul class="gnav_lowerMenu">
-                                <li class="gnav_lowerMenu_item show-subMenu"><a href="">私達について</a></li>
+                                <li class="gnav_lowerMenu_item nav-about"><a href="">私達について</a></li>
                                 <li class="gnav_lowerMenu_item"><a href="">新着情報</a></li>
-                                <li class="gnav_lowerMenu_item"><a href="./products/">製品案内</a></li>
+                                <li class="gnav_lowerMenu_item nav-product"><a href="./products/">製品案内</a></li>
                                 <li class="gnav_lowerMenu_item"><a href="">取扱店</a></li>
-                                <li class="gnav_lowerMenu_item"><a href="">コンテンツ</a></li>
-                                <li class="gnav_lowerMenu_item"><a href="">会社案内</a></li>
+                                <li class="gnav_lowerMenu_item nav-contents"><a href="">コンテンツ</a></li>
+                                <li class="gnav_lowerMenu_item nav-company"><a href="">会社案内</a></li>
                                 <li class="gnav_lowerMenu_item"><a href="">FAQ</a></li>
                             </ul>
                         </div>
@@ -65,19 +65,20 @@
                         <p class="taling-r">受付時間9:30～17:00(月～金)</p>
                     </div>
                     <!-- ***** ホバー時のサブメニュー表示***** -->
-                    <div class="gnav-about">
+                    <!-- 私たちについて -->
+                    <div id="sub-menu-about" class="gnav-about hover-menu">
                         <div class="content">
                             <div class="sub-nav-left">
                                 <div class="title">私達について</div> 
                                 <div class="sub-list">
                                     <ul>
-                                        <li>バイオゴールドの原材料/こだわり</li>
-                                        <li>バイオゴールドのサポート</li>
-                                        <li>はじめての方へ</li>
-                                        <li>クラフトマンシップ</li>
-                                        <li>放射性物質に関する取り組み</li>
-                                        <li>研究・開発</li>
-                                        <li>バイオゴールドの秘話</li>
+                                        <li><a href="#">バイオゴールドの原材料/こだわり</a></li>
+                                        <li><a href="#">バイオゴールドのサポート</a></li>
+                                        <li><a href="#">はじめての方へ</a></li>
+                                        <li><a href="#">クラフトマンシップ</a></li>
+                                        <li><a href="#">放射性物質に関する取り組み</a></li>
+                                        <li><a href="#">研究・開発</a></li>
+                                        <li><a href="#">バイオゴールドの秘話</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,7 +90,87 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- end of gnav-about-->
+                    </div><!-- end of sub-menu-about-->
+                    <!-- 製品案内 -->
+                    <div id="sub-menu-product" class="gnav-about hover-menu">
+                        <div class="content">
+                            <div class="sub-nav-left">
+                                <div class="title">土・土壌改良材</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>クラシック元肥</li>
+                                        <li>クラシック熟成 大地肥</li>
+                                        <li>長期深森熟成 腐葉土（ダイレクト販売限定）</li>
+                                        <li>長期多段熟成 牛ふん（ダイレクト販売限定）</li>
+                                        <li>バイオゴールドの土</li>
+                                        <li>バイオゴールドの土ストレスゼロ</li>
+                                        <li>薔薇の土（ダイレクト販売限定）【生産終了】</li>
+                                        <li>新商品</li>
+                                        <li>新商品</li>
+                                    </ul>
+                                </div>
+                                <div class="title">追肥</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>バイオゴールドオリジナル</li>
+                                        <li>スーパーバイオゴールド【生産終了】</li>
+                                        <li>セレクション薔薇</li>
+                                        <li>セレクション芝生</li>
+                                        <li>ヴィコント564ネオ</li>
+                                        <li>ヴィコント564【生産終了】</li>
+                                        <li>ヴィコント064</li>
+                                    </ul>
+                                </div>
+                                <div class="title">活性液・他</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>バイオゴールドバイタル</li>
+                                        <li>きままにミスト</li>
+                                        <li>バイタルV-RNA</li>
+                                        <li>バイオゴールドのニーム</li>
+                                    </ul>
+                                </div>
+                                <div class="title">剪定はさみ</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>剪定はさみ200</li>
+                                        <li>剪定はさみ180</li>
+                                        <li>花がら摘み</li>
+                                        <li>お手入れセット</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end of sub-menu-product-->
+                    <!-- コンテンツ -->
+                    <div id="sub-menu-contents" class="gnav-about hover-menu">
+                        <div class="content">
+                            <div class="sub-nav-left">
+                                <div class="title">コンテンツ</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>コラム</li>
+                                        <li>育て方検索</li>
+                                        <li>インスタグラム</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end of sub-menu-product-->
+                    <!-- 会社案内 -->
+                    <div id="sub-menu-company" class="gnav-about hover-menu">
+                        <div class="content">
+                            <div class="sub-nav-left">
+                                <div class="title">会社案内</div> 
+                                <div class="sub-list">
+                                    <ul>
+                                        <li>企業情報</li>
+                                        <li>採用情報</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end of sub-menu-product-->
                 </div><!-- end of gnav_wrap-->
             </nav>
             <nav class="gnav_sp">
@@ -265,7 +346,7 @@
                     <ul>
                         <li>
                             <span class="day flex-1">2021/07/19</span>
-                            <span class="cat flex-2">バイオゴールドニュース</span>
+                            <span class="cat flex-2">バイオゴールド<br>ニュース</span>
                             <p class="newsBody flex-5">【重要】東京2020オリンピック・パラリンピック競技大会に伴うお届け遅延の可能性について</p>
                         </li>
                         <li>
@@ -329,6 +410,70 @@
                         <span>はままつフラワーパーク</span>
                         <p>3,000種10万本の植物が植えられている植物園</p>
                         <p class="address">静岡県浜松市西区舘山寺町195番地</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/白馬コルチナ・イングリッシュガーデン.jpeg" alt="白馬コルチナ・イングリッシュガーデン">
+                    <div class="content">
+                        <span>白馬コルチナ・イングリッシュガーデン</span>
+                        <p>北アルプスの麓に広がる天然林</p>
+                        <p class="address">長野県北安曇郡小谷村千国乙12860-1</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/やくらいガーデン.jpeg" alt="やくらいガーデン">
+                    <div class="content">
+                        <span>やくらいガーデン</span>
+                        <p>四季を通して花々が豊かに咲き乱れる</p>
+                        <p class="address">宮城県加美郡加美町字味ヶ袋やくらい原1-9</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/かのやバラ園.jpeg" alt="かのやばら園">
+                    <div class="content">
+                        <span>かのやばら園</span>
+                        <p>春のシーズンにはたくさんのバラが咲き誇る</p>
+                        <p class="address">鹿児島県鹿屋市浜田町1250番地</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/横浜イングリッシュ.jpeg" alt="横浜イングリッシュガーデン">
+                    <div class="content">
+                        <span>横浜イングリッシュガーデン</span>
+                        <p>都会の中の小さな楽園</p>
+                        <p class="address">横浜市西区西平沼町6-1 tvk ecom park</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/ヴェルニー公園.jpeg" alt="ヴェルニー公園">
+                    <div class="content">
+                        <span>ヴェルニー公園</span>
+                        <p>フランス庭園様式を取り入れた公園</p>
+                        <p class="address">神奈川県横須賀市汐入町1-1</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/花の駅 美野原.jpeg" alt="花の駅 美野原">
+                    <div class="content">
+                        <span>花の駅 美野原</span>
+                        <p>数百種類の植物が季節を彩る</p>
+                        <p class="address">群馬県吾妻郡中之条町大字折田2411</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/photo_001ラカスタ.jpeg" alt="美と癒しの庭園">
+                    <div class="content">
+                        <span>ラ・カスタ ナチュラル ヒーリング ガーデン</span>
+                        <p>美と癒しの庭園</p>
+                        <p class="address">長野県大町市常盤9729-2</p>
+                    </div>
+                </div><!-- .item -->
+                <div class="item">
+                    <img src="./images/どんでん平ゆり園.jpeg" alt="どんでん平ゆり園">
+                    <div class="content">
+                        <span>どんでん平ゆり園</span>
+                        <p>50万本のゆりが咲き競う美しい花園</p>
+                        <p class="address">山形県西置賜郡飯豊町大字萩生3341</p>
                     </div>
                 </div><!-- .item -->
               </div><!-- .owl-carousel -->
@@ -464,8 +609,8 @@
           <div class="footer-logo"><img src="./images/logo.svg" alt="Biogold 株式会社タクト"></div>
           <div class="footer-info">
               <div class="address">
-                  〒373-0813 群馬県太田市内ヶ島町913-4 <br>
-                  TEL：0276-40-1112  [受付時間 9:30~17:00 月～金]
+                  <span>〒373-0813 群馬県太田市内ヶ島町913-4　</span>　
+                  <span> TEL：0276-40-1112  [受付時間 9:30~17:00 月～金]</span>
               </div>
               <div class="sns">
                   <img src="./images/insta-logo.png" alt="" class="insta-logo">
@@ -478,10 +623,10 @@
               <ul>
                   <li>ご利用規約</li>
                   <li>プライバシーポリシー</li>
-                  <li>JP/EN</li>
+                  <li>JP/EN　</li>
+                  <li>©️2016-2021 TACT Corp.</li>
                   <div class="clearfix"></div>
               </ul>
-              ©️2016-2021 TACT Corp.
           </div>
       </div>
     </div> <!-- End of wrap -->
