@@ -19,7 +19,6 @@ $(function(){
         if ($.inArray('#sub-menu-about', array) >= 0 ){
             return ;
         }
-        console.log(array);
         $('#sub-menu-about').fadeOut();
      
     });
